@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | AI Barriers Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .uob-red { color: #B01C2E; }
+        .text-uob-red { color: #B01C2E; }
+        .bg-uob-red { background-color: #B01C2E; }
+        .border-uob-red { border-color: #B01C2E; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-uob-red rounded-lg flex items-center justify-center text-white font-bold text-sm">AI</div>
+                    <span class="font-bold text-xl tracking-tight hidden sm:block">AI Barriers Project</span>
+                </a>
+            </div>
+            <!-- 导航链接 -->
+            <div class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-600">
+                <a href="index.html" class="hover:text-red-600 transition">Home</a>
+                <a href="literature.html" class="hover:text-red-600 transition">Literature Review</a>
+                <a href="methodology.html" class="hover:text-red-600 transition">Methodology</a>
+                <a href="findings.html" class="hover:text-red-600 transition">Findings</a>
+                <a href="resources.html" class="hover:text-red-600 transition">Resources Hub</a>
+                <a href="team.html" class="text-uob-red border-b-2 border-uob-red pb-1">Team</a>
+            </div>
+            <!-- 统一的联系按钮 -->
+            <a href="mailto:uob-AIbarriers-project@bristol.ac.uk" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 bg-white border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 border border-gray-200 text-gray-600 text-xs font-bold uppercase tracking-widest mb-6">
+                <i data-lucide="users" class="w-4 h-4"></i>
+                <span>Interdisciplinary Research Group</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Meet the <span class="text-red-700">Team</span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                A collaboration between the School of Civil, Aerospace, and Design Engineering and the School of Sociology, Politics and International Studies.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
+
+        <!-- Principal Investigator -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-uob-red pl-4">Principal Investigator</h2>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden md:flex">
+                <div class="md:w-1/3 bg-gray-200 h-96 md:h-auto relative">
+                    <img src="figure/Flavia De Luca.jpg" alt="Prof. Flavia De Luca" class="w-full h-full object-cover object-top transition duration-500" onerror="this.src='https://placehold.co/400x500?text=No+Image'">
+                </div>
+                <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-2">Prof. Flavia De Luca</h3>
+                    <p class="text-red-600 font-bold uppercase tracking-wider text-xs mb-6">Project Lead | Engineering</p>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        "Biography to be confirmed pending submission."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Team Grid -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-uob-red pl-4">Postgraduate Researchers</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Researcher 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group hover:shadow-md transition">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="figure/Jana Alloush.jpg" alt="Jana Alloush" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x400?text=Jana'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-900">Jana Alloush</h3>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Researcher</p>
+                        <p class="text-sm text-gray-600 italic">"Biography to be confirmed pending submission."</p>
+                    </div>
+                </div>
+
+                <!-- Researcher 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group hover:shadow-md transition">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="figure/Erin Brady.jpg" alt="Erin Brady" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x400?text=Erin'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-900">Erin Brady</h3>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Researcher</p>
+                        <p class="text-sm text-gray-600 italic">"Biography to be confirmed pending submission."</p>
+                    </div>
+                </div>
+
+                <!-- Researcher 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group hover:shadow-md transition">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="figure/Rosie Castiglione.jpg" alt="Rosie Castiglione" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x400?text=Rosie'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-900">Rosie Castiglione</h3>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Researcher</p>
+                        <p class="text-sm text-gray-600 italic">"Biography to be confirmed pending submission."</p>
+                    </div>
+                </div>
+
+                <!-- Researcher 4 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group hover:shadow-md transition">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="figure/Weilin He.jpg" alt="Weilin He" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x400?text=Weilin'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-900">Weilin He</h3>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Researcher</p>
+                        <p class="text-sm text-gray-600 italic">"Biography to be confirmed pending submission."</p>
+                    </div>
+                </div>
+
+                <!-- Researcher 5 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group hover:shadow-md transition">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="figure/Sven Hollowell.jpg" alt="Sven Hollowell" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x400?text=Sven'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-900">Sven Hollowell</h3>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Researcher</p>
+                        <p class="text-sm text-gray-600 italic">"Biography to be confirmed pending submission."</p>
+                    </div>
+                </div>
+
+                <!-- Researcher 6 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group hover:shadow-md transition">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="figure/Adrianna Jezierska.jpg" alt="Adrianna Jezierska" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x400?text=Adrianna'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-900">Adrianna Jezierska</h3>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Researcher</p>
+                        <p class="text-sm text-gray-600 italic">"Biography to be confirmed pending submission."</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Project Support & Coordination -->
+        <section class="space-y-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-uob-red pl-4">Training & Operational Support</h2>
+
+            <!-- Support 1: Pau Erola -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden md:flex">
+                <div class="md:w-1/4 bg-gray-200 h-64 md:h-auto relative">
+                    <img src="figure/Pau Erola.jpg" alt="Pau Erola" class="w-full h-full object-cover object-top transition duration-500" onerror="this.src='https://placehold.co/400x500?text=Pau'">
+                </div>
+                <div class="p-8 md:w-3/4 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Pau Erola</h3>
+                    <p class="text-red-600 font-bold uppercase tracking-wider text-xs mb-4">Training Lead</p>
+                    <p class="text-gray-600 leading-relaxed italic text-sm">
+                        "Biography to be confirmed pending submission."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Support 2: Emily Wride -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden md:flex">
+                <div class="md:w-1/4 bg-gray-200 h-64 md:h-auto relative">
+                    <img src="figure/Emily Wride.jpg" alt="Emily Wride" class="w-full h-full object-cover object-top transition duration-500" onerror="this.src='https://placehold.co/400x500?text=Emily'">
+                </div>
+                <div class="p-8 md:w-3/4 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Emily Wride</h3>
+                    <p class="text-red-600 font-bold uppercase tracking-wider text-xs mb-4">Logistics & Event Coordinator</p>
+                    <p class="text-gray-600 leading-relaxed italic text-sm">
+                        "Biography to be confirmed pending submission."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-gray-100 rounded-3xl p-10 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div class="inline-flex p-3 bg-red-100 text-red-600 rounded-full mb-6">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                <p class="text-gray-600 mb-8">
+                    For inquiries about the project, potential collaborations, or to request access to our findings, please reach out to our team.
+                </p>
+                <a href="mailto:uob-AIbarriers-project@bristol.ac.uk" class="text-xl md:text-2xl font-bold text-uob-red hover:underline break-all">
+                    uob-AIbarriers-project@bristol.ac.uk
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-medium uppercase tracking-wider opacity-60">
+            <p>&copy; 2026 University of Bristol. EPSRC Funded.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0 uppercase font-bold">
+                <a href="index.html" class="hover:text-white transition tracking-tighter">Ethics Protocol</a>
+                <a href="index.html" class="hover:text-white transition tracking-tighter">Data Management</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
