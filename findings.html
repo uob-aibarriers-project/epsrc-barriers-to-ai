@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Findings | AI Barriers Project</title>
-    <!-- 引入 Tailwind CSS -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 Lucide 图标库 -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .uob-red { color: #B01C2E; }
         .text-uob-red { color: #B01C2E; }
         .bg-uob-red { background-color: #B01C2E; }
         .border-uob-red { border-color: #B01C2E; }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed font-sans">
 
-    <!-- 导航栏 (Updated) -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full glass-nav z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <a href="index.html" class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-uob-red rounded-lg flex items-center justify-center text-white font-bold text-sm">AI</div>
+                    <div class="w-8 h-8 bg-uob-red rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">AI</div>
                     <span class="font-bold text-xl tracking-tight hidden sm:block">AI Barriers Project</span>
                 </a>
             </div>
-            <!-- 导航链接：包含全部 6 个内容板块，Findings 高亮 -->
             <div class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-600">
                 <a href="index.html" class="hover:text-red-600 transition">Home</a>
                 <a href="literature.html" class="hover:text-red-600 transition">Literature Review</a>
@@ -37,97 +42,214 @@
                 <a href="resources.html" class="hover:text-red-600 transition">Resources Hub</a>
                 <a href="team.html" class="hover:text-red-600 transition">Team</a>
             </div>
-            <a href="mailto:uob-AIbarriers-project@bristol.ac.uk" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">Contact Us</a>
+            <a href="team.html#contact" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">Contact Us</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="pt-32 pb-16 bg-white border-b border-gray-100">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-green-700 text-xs font-bold uppercase tracking-widest mb-6">
-                <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
-                <span>Data Insights</span>
+    <header class="pt-40 pb-16 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-[10px] font-bold uppercase tracking-widest mb-6">
+                <i data-lucide="bar-chart-2" class="w-3 h-3"></i>
+                <span>Mixed-Methods Data Insights</span>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 Key <span class="text-uob-red">Research Findings</span>
             </h1>
-            <p class="text-xl text-gray-600 leading-relaxed max-w-3xl">
-                Our mixed-methods analysis has uncovered significant structural discrepancies and confidence gaps that hinder equitable access to AI doctoral studies.
+            <p class="text-lg text-gray-600 leading-relaxed max-w-3xl border-l-4 border-uob-red pl-6">
+                Evidence of structural "False Hope" in recruitment, measurable literacy gains through targeted training, and deep-seated confidence barriers among non-STEM disciplines.
             </p>
         </div>
     </header>
 
-    <!-- Findings Content -->
-    <main class="max-w-6xl mx-auto px-6 py-16 space-y-24">
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-32">
 
-        <!-- Insight 1: Structural -->
-        <section>
-            <div class="flex items-center space-x-4 mb-8">
-                <div class="p-3 bg-red-100 rounded-xl text-red-600">
-                    <i data-lucide="globe" class="w-8 h-8"></i>
+        <!-- 1. Structural Market Analysis -->
+        <section id="structural">
+            <div class="flex items-center space-x-4 mb-12">
+                <div class="p-3 bg-gray-900 rounded-xl text-white shadow-lg">
+                    <i data-lucide="search" class="w-8 h-8"></i>
                 </div>
-                <h2 class="text-3xl font-bold text-gray-900">1. Global Ambition vs. National Restriction</h2>
+                <h2 class="text-3xl font-bold text-gray-900 tracking-tight">1. Structural Barriers: The "False Hope" Gap</h2>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="prose text-gray-600">
-                    <p class="mb-4">
-                        Our NLP analysis of <strong>2,643 PhD listings</strong> revealed a critical misalignment we term the <strong>"False Hope" barrier</strong>.
-                    </p>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6 text-gray-600 prose prose-gray">
                     <p>
-                        While the vast majority of UKRI-funded projects advertise themselves as open to "Worldwide" applicants, the underlying funding structures typically cap international recruitment at 30%. Coupled with high visa costs, this creates a system that <em>invites</em> global talent but structurally <em>excludes</em> it.
+                        Our NLP analysis of <strong>2,643 active PhD listings</strong> (FindAPhD.com, Dec 2025) identified a major structural discrepancy between institutional branding and funding reality.
                     </p>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <h4 class="text-gray-900 font-bold mb-2">Global Ambition vs. National Restriction</h4>
+                        <p class="text-sm italic">
+                            "While 79.2% of funded projects advertise themselves as available worldwide, this contrasts with the typical 30% international recruitment cap in UKRI-funded cohorts, creating a 'False Hope' barrier for global talent."
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-lg">
-                    <div class="flex justify-between items-end mb-6 border-b border-gray-100 pb-6">
-                        <div>
-                            <div class="text-5xl font-black text-green-600 mb-1">79.2%</div>
-                            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Advertised Openness</div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl relative overflow-hidden">
+                    <div class="grid grid-cols-2 gap-8 text-center relative z-10">
+                        <div class="p-6">
+                            <div class="text-5xl font-black text-green-600 mb-2">79.2%</div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-tight">Advertised Global Openness</p>
                         </div>
-                        <div class="text-right">
-                            <div class="text-5xl font-black text-red-600 mb-1">30%</div>
-                            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Real Intake Cap</div>
+                        <div class="p-6 border-l border-gray-100">
+                            <div class="text-5xl font-black text-uob-red mb-2">30%</div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-tight">Average Real Intake Cap</p>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-500 italic text-center">
-                        Fig 1. The discrepancy between advertised eligibility and funding reality.
+                    <div class="mt-8 pt-8 border-t border-gray-50 text-center">
+                        <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-red-50 text-uob-red text-xs font-bold">
+                            <i data-lucide="alert-triangle" class="w-3.5 h-3.5 mr-2"></i>
+                            Structural Misalignment
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Quantitative Results -->
+        <section id="literacy">
+            <div class="flex items-center space-x-4 mb-12">
+                <div class="p-3 bg-uob-red rounded-xl text-white shadow-lg">
+                    <i data-lucide="brain" class="w-8 h-8"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 tracking-tight">2. Impact on AI Literacy</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Stat Card 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="text-uob-red font-black text-5xl mb-4 group-hover:scale-105 transition">+16.2%</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 tracking-tight">Knowledge Acquisition</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Mean raw AI literacy scores shifted from <strong>52.3%</strong> (pre) to <strong>68.5%</strong> (post) following our introductory intervention.
+                    </p>
+                </div>
+                <!-- Stat Card 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="text-gray-900 font-black text-5xl mb-4 group-hover:scale-105 transition">+21.7pp</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 tracking-tight">STEM Catalyst Effect</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        STEM students saw significantly higher growth, effectively widening the literacy gap compared to non-STEM peers (+11.4pp).
+                    </p>
+                </div>
+                <!-- Stat Card 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="text-blue-600 font-black text-5xl mb-4 group-hover:scale-105 transition">0.5 SD</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 tracking-tight">IRT Ability Shift</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        The Item Response Theory (IRT) model showed a positive shift of 0.5 standard deviations in "true ability" estimates.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Insight 2: Confidence Gap -->
-        <section>
-            <div class="flex items-center space-x-4 mb-8">
-                <div class="p-3 bg-blue-100 rounded-xl text-blue-600">
-                    <i data-lucide="brain" class="w-8 h-8"></i>
+        <!-- 3. Qualitative Insights -->
+        <section id="qualitative">
+            <div class="flex items-center space-x-4 mb-12">
+                <div class="p-3 bg-blue-600 rounded-xl text-white shadow-lg">
+                    <i data-lucide="message-square" class="w-8 h-8"></i>
                 </div>
-                <h2 class="text-3xl font-bold text-gray-900">2. The Confidence Gap</h2>
+                <h2 class="text-3xl font-bold text-gray-900 tracking-tight">3. Qualitative Dimensions</h2>
             </div>
-            <div class="bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100">
-                <p class="text-xl text-blue-900 font-medium leading-relaxed mb-6">
-                    "Even among students with identical academic backgrounds in STEM, those from lower socio-economic backgrounds reported significantly lower 'AI Self-Efficacy' scores on the AILIT-S scale."
-                </p>
-                <div class="flex items-center space-x-4">
-                    <div class="h-1 w-12 bg-blue-400 rounded-full"></div>
-                    <p class="text-sm font-bold text-blue-700 uppercase tracking-widest">Qualitative Interview Insight</p>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Theme 1 -->
+                <div class="bg-blue-50/50 p-10 rounded-[2.5rem] border border-blue-100">
+                    <h4 class="text-blue-900 font-extrabold uppercase tracking-widest text-[10px] mb-6">Theme: Technical Gatekeeping</h4>
+                    <p class="text-lg text-blue-950 font-medium italic leading-relaxed mb-8">
+                        "I never got any chance to study Python... it seems so complicated to a person from a social science major."
+                    </p>
+                    <p class="text-sm text-blue-800 leading-relaxed">
+                        Prior experiences in high school and undergraduate choices act as long-term filters. However, training shifted perceptions from AI as a "math-only" field to an accessible tool.
+                    </p>
+                </div>
+
+                <!-- Theme 2 -->
+                <div class="bg-red-50/50 p-10 rounded-[2.5rem] border border-red-100">
+                    <h4 class="text-uob-red font-extrabold uppercase tracking-widest text-[10px] mb-6">Theme: Career Expectations</h4>
+                    <p class="text-lg text-red-950 font-medium italic leading-relaxed mb-8">
+                        "I chose my degree because it's very broad... you always need a mechanical engineer. For AI, job opportunities seem limited."
+                    </p>
+                    <p class="text-sm text-red-800 leading-relaxed">
+                        Ambiguity about post-doctoral career paths outside of "Big Tech" hubs remains a significant barrier for students evaluating long-term research commitment.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Download CTA -->
-        <section class="text-center py-12">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">Explore the complete dataset</h3>
-            <a href="resources.html" class="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-full font-bold hover:bg-gray-700 transition shadow-lg">
-                Go to Resources Hub <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
-            </a>
+        <!-- 4. Policy Perception -->
+        <section id="policy">
+            <div class="flex items-center space-x-4 mb-12">
+                <div class="p-3 bg-gray-100 rounded-xl text-gray-900 shadow-md">
+                    <i data-lucide="file-check" class="w-8 h-8"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 tracking-tight">4. Perception of Institutional Policy</h2>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-gray-100 p-12 shadow-sm">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/3">
+                        <div class="text-gray-900 font-bold mb-4 flex items-center">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2"></i>
+                            Clarity as an Enabler
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Participants found policy examples (listing limits of use) useful. Familiarity with institutional guidance correlates with higher confidence in using AI ethically.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 border-l border-gray-100 md:pl-12">
+                        <div class="text-gray-900 font-bold mb-4 flex items-center">
+                            <i data-lucide="help-circle" class="w-5 h-5 text-blue-500 mr-2"></i>
+                            The Constraint Effect
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Some participants report feeling "limited" by policy even for personal work, raising suspicions about long-term professional autonomy in AI.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 border-l border-gray-100 md:pl-12">
+                        <div class="text-gray-900 font-bold mb-4 flex items-center">
+                            <i data-lucide="globe" class="w-5 h-5 text-purple-500 mr-2"></i>
+                            Language Equity
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            International students highlighted that policy flexibility regarding AI for translation/grammar check is a critical enabler for equity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="text-center bg-gray-900 py-20 rounded-[3rem] relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <i data-lucide="database" class="w-64 h-64 -bottom-20 -right-20 absolute"></i>
+            </div>
+            <h3 class="text-3xl font-bold text-white mb-6 relative z-10">Access the Full Datasets</h3>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto relative z-10">
+                Download our complete research report, including methodology tools and the NLP pipeline documentation.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                <a href="resources.html" class="inline-flex items-center px-8 py-4 bg-uob-red text-white rounded-full font-bold hover:bg-red-700 transition shadow-lg">
+                    Go to Resources Hub <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+                <a href="team.html#contact" class="inline-flex items-center px-8 py-4 bg-white/10 text-white border border-white/20 rounded-full font-bold hover:bg-white/20 transition">
+                    Contact Researchers
+                </a>
+            </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-12 px-6 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto text-center text-xs text-gray-400 font-medium uppercase tracking-wider">
+    <footer class="bg-white py-12 px-6 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 font-medium uppercase tracking-wider">
             <p>&copy; 2026 University of Bristol. EPSRC Funded.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0 uppercase font-bold">
+                <a href="index.html" class="hover:text-red-600 transition tracking-tighter text-gray-600">Home</a>
+                <a href="team.html#contact" class="hover:text-red-600 transition tracking-tighter text-gray-600">Contact Team</a>
+            </div>
         </div>
     </footer>
 
