@@ -85,7 +85,7 @@
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed font-sans">
 
-    <!-- 1. Navigation (Unified Style) -->
+    <!-- 1. Navigation -->
     <nav class="fixed w-full glass-nav z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -102,7 +102,8 @@
                 <a href="resources.html" class="hover:text-uob-red transition">Resources Hub</a>
                 <a href="team.html" class="hover:text-uob-red transition">Team</a>
             </div>
-            <a href="mailto:uob-AIbarriers-project@bristol.ac.uk" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">
+            <!-- 修改点：将 mailto 改为跳转到 team.html 的 contact 锚点 -->
+            <a href="team.html#contact" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">
                 Contact Us
             </a>
         </div>
@@ -175,7 +176,7 @@
                         <a href="#section-2" class="sidebar-link block text-sm font-bold text-gray-900 mb-2 pl-2 border-l-2 border-transparent">2. AI Literacy</a>
                         <div class="ml-2 space-y-1">
                             <a href="#s2-1" class="block text-xs text-gray-500 hover:text-uob-red py-1 pl-3 border-l border-gray-100">2.1 Development</a>
-                            <a href="#s2-2" class="block text-xs text-gray-500 hover:text-uob-red py-1 pl-3 border-l border-gray-100">2.2 Intervention</a>
+                            <a href="#s2-2" class="block text-xs text-gray-500 hover:text-uob-red py-1 pl-3 border-l border-gray-100">2.2 Intervention Design</a>
                             <a href="#s2-3" class="block text-xs text-gray-500 hover:text-uob-red py-1 pl-3 border-l border-gray-100">2.3 Conclusion</a>
                         </div>
                     </div>
@@ -314,17 +315,12 @@
                         <h4 class="text-uob-red font-bold mb-4">1.3.1 The Socio-economic Inequalities Loop In AI</h4>
                         <p class="text-gray-600 text-sm mb-6">Barriers to AI doctoral education reflect broader inequalities within the AI ecosystem. This creates a feedback loop where existing power imbalances in AI research influence future educational opportunities.</p>
 
-                        <!-- DIAGRAM: THE INEQUALITY LOOP (Corrected to Figure 1) -->
+                        <!-- DIAGRAM: THE INEQUALITY LOOP -->
                         <div class="my-10 bg-white p-8 md:p-12 border border-gray-100 relative overflow-visible shadow-sm rounded-3xl flex flex-col items-center">
-
                             <h4 class="text-uob-red font-bold text-xs uppercase tracking-widest text-center mb-8">
                                 Figure 1: The Inequality Loop
                             </h4>
-
-                            <!-- Diagram Wrapper -->
                             <div class="relative z-10 w-full max-w-lg">
-
-                                <!-- Loop SVG -->
                                 <svg class="absolute top-0 left-0 w-full h-full pointer-events-none hidden md:block" style="overflow: visible; z-index: 0;">
                                     <path d="M 400 375 L 480 375 Q 500 375 500 355 L 500 40 Q 500 20 480 20 L 370 20"
                                           fill="none" stroke="#B01C2E" stroke-width="1.5" marker-end="url(#arrowhead)"/>
@@ -332,8 +328,6 @@
                                         <polygon points="0 0, 10 3.5, 0 7" fill="#B01C2E" />
                                     </marker>
                                 </svg>
-
-                                <!-- Nodes Container -->
                                 <div class="flex flex-col items-center gap-4 relative z-10">
                                     <div class="w-48 py-2 bg-white border border-uob-red text-center shadow-sm rounded-lg">
                                         <span class="text-xs font-bold text-gray-900">AI PhD Studies</span>
@@ -391,30 +385,20 @@
                     <p>AI literacy is defined by Long and Magerko (2020) as: “a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI; and use AI as a tool online, at home, and in the workplace”.</p>
                 </div>
 
-                <!-- 17 AI Literacy Competencies -->
-                <div class="my-10">
-                    <h4 class="text-sm font-bold text-uob-red uppercase tracking-wider mb-6 text-center">Long & Magerko (2020) 17 Competencies of AI Literacy</h4>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Recognising AI</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Understanding Intelligence</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Interdisciplinarity</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">General vs. Narrow</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">AI’s Strengths & Weaknesses</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Imagine Future AI</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Representations</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Decision-Making</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Machine Learning Steps</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Human Role in AI</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Data Literacy</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Learning from Data</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Critically Interpreting Data</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Action and Reaction</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Sensors</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm">Ethics</div>
-                        <div class="p-3 border border-gray-200 bg-white text-xs font-semibold text-gray-700 text-center rounded-xl hover:border-uob-red transition shadow-sm col-span-2 md:col-span-1">Programmability</div>
+            <!-- 2. AI Literacy -->
+            <section id="section-2" class="scroll-mt-32">
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="p-3 bg-gray-100 rounded-xl text-gray-800 shadow-sm">
+                        <i data-lucide="brain" class="w-8 h-8"></i>
                     </div>
+                    <h2 class="text-3xl font-bold text-gray-900">2. AI Literacy</h2>
                 </div>
 
+                <div class="prose prose-gray max-w-none text-gray-600">
+                    <p>AI literacy is defined by Long and Magerko (2020) as: “a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI; and use AI as a tool online, at home, and in the workplace”.</p>
+                </div>
+
+                <!-- 2.1 AI Literacy Development (Format Reference) -->
                 <div id="s2-1" class="prose prose-gray max-w-none text-gray-600 mt-12">
                     <h3>2.1 AI Literacy Development</h3>
                     <p>AI literacy does not develop automatically. Institutional and psychological filters govern its trajectory.</p>
@@ -433,6 +417,30 @@
                             Stereotypes of the "tech geek" act as psychological boundaries. Low confidence is linked to early disengagement, particularly among URGs and women.
                         </li>
                     </ul>
+                </div>
+
+                <!-- 2.2 Intervention Design (NEW: Format reference 2.1) -->
+                <div id="s2-2" class="prose prose-gray max-w-none text-gray-600 mt-12">
+                    <h3>2.2 Intervention Design</h3>
+                    <p>AI literacy has a proven positive effect on career intention and interest. Evaluative literature in HE or pre-HE contexts tends to focus either on improving career interest, or on improving participants' AI literacy itself.</p>
+
+                    <ul class="space-y-4 text-sm list-none pl-0 mt-6">
+                        <li class="border-l-4 border-uob-red pl-6 py-1 bg-white/50 rounded-r-xl">
+                            <strong class="block text-gray-900 mb-1">2.2.1 Enhancing AI Career Interest</strong>
+                            Interventions often implicitly target AI literacy competencies. Mapping programme features to associated competencies (e.g., machine learning steps, ethics, programmability) suggests that participants are afforded opportunities to develop these skills.
+                        </li>
+                        <li class="border-l-4 border-uob-red pl-6 py-1 bg-white/50 rounded-r-xl">
+                            <strong class="block text-gray-900 mb-1">2.2.2 Barriers to Attendance</strong>
+                            The digital divide remains the most significant barrier to AI literacy development. variability of internet access among university students necessitates hybrid engagement modes as a precaution, facilitating attendance for disabled students or those with caring responsibilities.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2.3 Conclusion and Recommendations (NEW: Format reference 1.4) -->
+                <div id="s2-3" class="prose prose-gray max-w-none text-gray-600 mt-12">
+                    <h3>2.3 Conclusion and Recommendations</h3>
+                    <p>Given that participants' engagement with AI learning is cyclically enabled by their AI literacy and self-efficacy, and that AI literacy increases career interest, this concept is a useful focus for the design of training.</p>
+                    <p>Evaluative research in prior research is largely inconsistent with prevailing definitions. Using a comprehensive framework (Long and Magerko, 2020) for both designing the programme and evaluating its efficacy is essential for robust and transferable research results.</p>
                 </div>
             </section>
 
@@ -650,7 +658,7 @@
         lucide.createIcons();
 
         // ScrollSpy logic
-        const sections = document.querySelectorAll('section, div[id^=\"s\"]');
+        const sections = document.querySelectorAll('section, div[id^="s"]');
         const navLinks = document.querySelectorAll('.sidebar-link');
 
         window.addEventListener('scroll', () => {
