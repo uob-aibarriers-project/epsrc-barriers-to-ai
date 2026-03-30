@@ -107,9 +107,8 @@
             letter-spacing: 0.08em;
         }
 
-        /* ── Tab System ── */
-        .tab-section { display: none; }
-        .tab-section.active { display: block; }
+        /* ── Continuous scroll sections ── */
+        .tab-section { display: block; }
 
         .tab-btn {
             position: relative;
@@ -174,6 +173,23 @@
             letter-spacing: 0.08em;
         }
 
+        /* ── Side Nav ── */
+        .side-nav-btn.active {
+            color: var(--uob-red);
+            background: #FEF2F2;
+            position: relative;
+        }
+        .side-nav-btn.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 20%;
+            height: 60%;
+            width: 3px;
+            background: var(--uob-red);
+            border-radius: 99px;
+        }
+
         /* ── Sticky section nav ── */
         .section-label {
             font-size: 0.7rem;
@@ -213,6 +229,33 @@
         </div>
     </nav>
 
+    <!-- Fixed Left Sidebar Navigation -->
+    <aside id="side-nav" class="hidden xl:flex fixed left-6 top-1/2 -translate-y-1/2 z-40 flex-col items-start">
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-3 flex flex-col gap-1 min-w-[160px]">
+            <p class="text-[9px] font-black uppercase tracking-widest text-gray-400 px-3 pt-1 pb-2">Navigate</p>
+            <button onclick="switchTab('findings', this)" data-tab="findings"
+                class="side-nav-btn active text-left w-full px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 text-gray-600 hover:text-uob-red hover:bg-red-50">
+                <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                Market Findings
+            </button>
+            <button onclick="switchTab('qualitative', this)" data-tab="qualitative"
+                class="side-nav-btn text-left w-full px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 text-gray-600 hover:text-uob-red hover:bg-red-50">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                Qualitative Results
+            </button>
+            <button onclick="switchTab('quantitative', this)" data-tab="quantitative"
+                class="side-nav-btn text-left w-full px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 text-gray-600 hover:text-uob-red hover:bg-red-50">
+                <i data-lucide="brain-circuit" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                Quantitative Results
+            </button>
+            <button onclick="switchTab('conclusion', this)" data-tab="conclusion"
+                class="side-nav-btn text-left w-full px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 text-gray-600 hover:text-uob-red hover:bg-red-50">
+                <i data-lucide="flag" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                Conclusion
+            </button>
+        </div>
+    </aside>
+
     <!-- Hero Header -->
     <header class="pt-40 pb-16 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 text-center lg:text-left">
@@ -229,16 +272,16 @@
 
             <!-- Tab Navigation -->
             <div class="flex flex-wrap gap-3 mt-4">
-                <button class="tab-btn active" onclick="switchTab('findings', this)">
-                    <i data-lucide="bar-chart-2" class="inline w-4 h-4 mr-1 mb-0.5"></i> Findings
+                <button class="tab-btn active" data-tab="findings" onclick="switchTab('findings', this)">
+                    <i data-lucide="bar-chart-2" class="inline w-4 h-4 mr-1 mb-0.5"></i> Market Findings
                 </button>
-                <button class="tab-btn" onclick="switchTab('qualitative', this)">
+                <button class="tab-btn" data-tab="qualitative" onclick="switchTab('qualitative', this)">
                     <i data-lucide="message-circle" class="inline w-4 h-4 mr-1 mb-0.5"></i> Qualitative Results
                 </button>
-                <button class="tab-btn" onclick="switchTab('quantitative', this)">
+                <button class="tab-btn" data-tab="quantitative" onclick="switchTab('quantitative', this)">
                     <i data-lucide="brain-circuit" class="inline w-4 h-4 mr-1 mb-0.5"></i> Quantitative Results
                 </button>
-                <button class="tab-btn" onclick="switchTab('conclusion', this)">
+                <button class="tab-btn" data-tab="conclusion" onclick="switchTab('conclusion', this)">
                     <i data-lucide="flag" class="inline w-4 h-4 mr-1 mb-0.5"></i> Conclusion
                 </button>
             </div>
@@ -250,7 +293,7 @@
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <main class="max-w-7xl mx-auto px-6 py-20">
 
-        <div id="tab-findings" class="tab-section active space-y-32">
+        <div id="tab-findings" class="tab-section space-y-32 scroll-mt-28">
 
             <!-- 1A: Financial Accessibility -->
             <section>
@@ -535,11 +578,17 @@
 
         </div><!-- /tab-findings -->
 
+        <!-- Section Divider -->
+        <div class="flex items-center gap-6 py-8">
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            <span class="text-[10px] font-black uppercase tracking-widest text-gray-300">Qualitative Results</span>
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+        </div>
 
         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
              SECTION 2 — QUALITATIVE RESULTS
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-        <div id="tab-qualitative" class="tab-section space-y-20">
+        <div id="tab-qualitative" class="tab-section space-y-20 scroll-mt-28">
 
             <!-- Intro -->
             <div class="grid lg:grid-cols-3 gap-8 items-start">
@@ -805,11 +854,17 @@
 
         </div><!-- /tab-qualitative -->
 
+        <!-- Section Divider -->
+        <div class="flex items-center gap-6 py-8">
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            <span class="text-[10px] font-black uppercase tracking-widest text-gray-300">Quantitative Results</span>
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+        </div>
 
         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
              SECTION 3 — QUANTITATIVE RESULTS
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-        <div id="tab-quantitative" class="tab-section space-y-20">
+        <div id="tab-quantitative" class="tab-section space-y-20 scroll-mt-28">
 
             <!-- Intro -->
             <div class="bg-uob-red rounded-[3rem] p-12 md:p-16 text-white relative overflow-hidden">
@@ -1067,11 +1122,17 @@
 
         </div><!-- /tab-quantitative -->
 
+        <!-- Section Divider -->
+        <div class="flex items-center gap-6 py-8">
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            <span class="text-[10px] font-black uppercase tracking-widest text-gray-300">Conclusion</span>
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+        </div>
 
         <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
              SECTION 4 — CONCLUSION
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-        <div id="tab-conclusion" class="tab-section space-y-16">
+        <div id="tab-conclusion" class="tab-section space-y-16 scroll-mt-28">
 
             <!-- Restated hypotheses -->
             <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-10">
@@ -1217,17 +1278,49 @@
         // ── Lucide Icons ──
         lucide.createIcons();
 
-        // ── Tab Switching ──
+        // ── Lucide Icons ──
+        lucide.createIcons();
+
+        // ── Scroll-based Navigation ──
+        // switchTab now scrolls to the section instead of toggling visibility
         function switchTab(name, btn) {
-            // hide all sections
-            document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            // show selected
-            document.getElementById('tab-' + name).classList.add('active');
-            btn.classList.add('active');
-            // scroll to main content
-            window.scrollTo({ top: document.querySelector('main').offsetTop - 20, behavior: 'smooth' });
+            const target = document.getElementById('tab-' + name);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
+
+        // ── IntersectionObserver: highlight active nav item on scroll ──
+        const sections = ['findings', 'qualitative', 'quantitative', 'conclusion'];
+
+        function setActive(name) {
+            document.querySelectorAll('.tab-btn, .side-nav-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('[data-tab="' + name + '"]').forEach(b => b.classList.add('active'));
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            // Find the topmost visible section
+            let topEntry = null;
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (!topEntry || entry.boundingClientRect.top < topEntry.boundingClientRect.top) {
+                        topEntry = entry;
+                    }
+                }
+            });
+            if (topEntry) {
+                const name = topEntry.target.id.replace('tab-', '');
+                setActive(name);
+            }
+        }, {
+            rootMargin: '-15% 0px -70% 0px',
+            threshold: 0
+        });
+
+        sections.forEach(name => {
+            const el = document.getElementById('tab-' + name);
+            if (el) observer.observe(el);
+        });
 
         // ── Image Zoom on Hover ──
         const overlay  = document.getElementById('img-zoom-overlay');
@@ -1266,11 +1359,8 @@
             zoomImg.src = '';
         });
 
-        // Initial attach + re-attach on tab switch (in case content rendered later)
+        // Initial attach zoom
         attachZoom();
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => setTimeout(attachZoom, 50));
-        });
     </script>
 </body>
 </html>
