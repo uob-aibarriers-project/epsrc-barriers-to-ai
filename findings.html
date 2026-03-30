@@ -173,6 +173,21 @@
             letter-spacing: 0.08em;
         }
 
+        /* ── Side Nav dots ── */
+        .side-dot {
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 99px;
+            background: #D1D5DB;
+            transition: all 0.25s ease;
+            flex-shrink: 0;
+        }
+        .side-dot.active {
+            background: var(--uob-red);
+            height: 18px;
+        }
+
         /* ── Side Nav ── */
         .side-nav-btn.active {
             color: var(--uob-red);
@@ -229,9 +244,22 @@
         </div>
     </nav>
 
-    <!-- Fixed Left Sidebar Navigation -->
-    <aside id="side-nav" class="hidden xl:flex fixed left-6 top-1/2 -translate-y-1/2 z-40 flex-col items-start">
-        <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-3 flex flex-col gap-1 min-w-[160px]">
+    <!-- Fixed Left Sidebar Navigation (hover to reveal) -->
+    <aside id="side-nav" class="hidden xl:block fixed left-0 top-1/2 -translate-y-1/2 z-40 group">
+        <!-- Collapsed trigger strip -->
+        <div class="flex flex-col items-center gap-2.5 pl-2 pr-3 py-4 cursor-pointer">
+            <span class="side-dot" data-tab="findings"></span>
+            <span class="side-dot" data-tab="qualitative"></span>
+            <span class="side-dot" data-tab="quantitative"></span>
+            <span class="side-dot" data-tab="conclusion"></span>
+        </div>
+        <!-- Expanded panel -->
+        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-1
+                    bg-white rounded-2xl shadow-xl border border-gray-100 p-3
+                    flex flex-col gap-1 min-w-[168px]
+                    opacity-0 pointer-events-none -translate-x-2
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0
+                    transition-all duration-200 ease-out">
             <p class="text-[9px] font-black uppercase tracking-widest text-gray-400 px-3 pt-1 pb-2">Navigate</p>
             <button onclick="switchTab('findings', this)" data-tab="findings"
                 class="side-nav-btn active text-left w-full px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 text-gray-600 hover:text-uob-red hover:bg-red-50">
@@ -1296,6 +1324,10 @@
         function setActive(name) {
             document.querySelectorAll('.tab-btn, .side-nav-btn').forEach(b => b.classList.remove('active'));
             document.querySelectorAll('[data-tab="' + name + '"]').forEach(b => b.classList.add('active'));
+            // sync dots
+            document.querySelectorAll('.side-dot').forEach(d => {
+                d.classList.toggle('active', d.dataset.tab === name);
+            });
         }
 
         const observer = new IntersectionObserver((entries) => {
