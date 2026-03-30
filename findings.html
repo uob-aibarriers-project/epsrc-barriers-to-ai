@@ -220,7 +220,7 @@
     <!-- Image Zoom Overlay -->
     <div id="img-zoom-overlay">
         <img id="zoom-img" src="" alt="">
-        <span class="close-hint">Click anywhere or move away to close</span>
+        <span class="close-hint">Click anywhere to close</span>
     </div>
 
     <!-- Navigation -->
@@ -323,7 +323,7 @@
 
         <div id="tab-findings" class="tab-section space-y-32 scroll-mt-28">
 
-            <!-- 1A: Financial Accessibility -->
+            <!-- Chapter 1: Financial Accessibility -->
             <section>
                 <div class="flex flex-col lg:flex-row gap-16 items-start">
                     <div class="lg:w-1/3 sticky top-32">
@@ -344,7 +344,7 @@
                         <!-- Fig 1 -->
                         <div class="finding-card">
                             <div class="figure-box">
-                                <img src="finding/Figure 1.png" alt="Funding Status distribution" class="zoomable-img">
+                                <img src="Figure_1.png" alt="Funding Status distribution" class="zoomable-img">
                                 <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 1: Funding status among PhD listings.</p>
                             </div>
                             <div class="p-10">
@@ -362,7 +362,7 @@
                         <div class="grid md:grid-cols-2 gap-8">
                             <div class="finding-card">
                                 <div class="figure-box">
-                                    <img src="finding/Figure 2.png" alt="Stipend Distribution" class="zoomable-img">
+                                    <img src="Figure_2.png" alt="Stipend Distribution" class="zoomable-img">
                                     <p class="mt-3 text-xs text-gray-400 italic text-center">Figure 2: Advertised annual PhD stipends.</p>
                                 </div>
                                 <div class="p-8">
@@ -372,7 +372,7 @@
                             </div>
                             <div class="finding-card">
                                 <div class="figure-box">
-                                    <img src="finding/Figure 3.png" alt="Top-up presence" class="zoomable-img">
+                                    <img src="Figure_3.png" alt="Top-up presence" class="zoomable-img">
                                     <p class="mt-3 text-xs text-gray-400 italic text-center">Figure 3: Presence of explicit financial top-ups.</p>
                                 </div>
                                 <div class="p-8">
@@ -386,22 +386,22 @@
                         <div class="grid md:grid-cols-2 gap-8">
                             <div class="finding-card">
                                 <div class="figure-box">
-                                    <img src="finding/Figure 4.png" alt="Top-up by University" class="zoomable-img">
+                                    <img src="Figure_4.png" alt="Top-up by University" class="zoomable-img">
                                     <p class="mt-3 text-xs text-gray-400 italic text-center">Figure 4: Top-up availability by institution.</p>
                                 </div>
                                 <div class="p-8">
                                     <h4 class="font-bold text-lg mb-2">1.4 Institutional Disparities</h4>
-                                    <p class="text-sm text-gray-500 leading-relaxed">The availability of research support varies widely across institutions. The University of Bristol sits near the middle (~22%), highlighting significant variation in the support landscape for doctoral researchers.</p>
+                                    <p class="text-sm text-gray-500 leading-relaxed">Top-up availability varies widely across institutions. The University of Bristol sits near the middle at approximately 22%, highlighting significant variation in additional research support across the doctoral landscape.</p>
                                 </div>
                             </div>
                             <div class="finding-card">
                                 <div class="figure-box">
-                                    <img src="finding/Figure 5.png" alt="Funding Clarity" class="zoomable-img">
+                                    <img src="Figure_5.png" alt="Funding Clarity" class="zoomable-img">
                                     <p class="mt-3 text-xs text-gray-400 italic text-center">Figure 5: Clarity of funding within funded PhD listings.</p>
                                 </div>
                                 <div class="p-8">
                                     <h4 class="font-bold text-lg mb-2">1.5 Ambiguity as a Filter</h4>
-                                    <p class="text-sm text-gray-500 leading-relaxed">Among funded listings, <strong>84.2%</strong> include explicit statements of secured funding. However, <strong>172 listings</strong> remain vague, and 9 are conditional. This ambiguity deters applicants without institutional insider knowledge of university funding mechanisms.</p>
+                                    <p class="text-sm text-gray-500 leading-relaxed">Among funded listings, <strong>84.2%</strong> include explicit statements of secured funding. However, <strong>172 listings</strong> remain vague, and 9 are conditional — deterring applicants without institutional insider knowledge of university funding mechanisms.</p>
                                 </div>
                             </div>
                         </div>
@@ -412,135 +412,220 @@
                             <h3 class="text-2xl font-bold mb-6">Who Pays for AI PhDs?</h3>
                             <p class="text-gray-400 leading-relaxed mb-8">The most common contributors are host Universities (630 listings) and UKRI Research Councils (604 listings). The EPSRC accounts for approximately 9.6% of analysed listings. Direct industry and charity contributions remain comparatively low.</p>
                             <!-- Fig 6 -->
-                            <div class="figure-box bg-white/5 rounded-2xl mb-8 border border-white/10">
-                                <img src="finding/Figure 6.png" alt="Funding Source Categories" class="zoomable-img">
+                            <div class="figure-box bg-white/5 rounded-2xl mb-4 border border-white/10">
+                                <img src="Figure_6.png" alt="Funding Source Categories" class="zoomable-img">
                                 <p class="mt-3 text-xs text-gray-500 italic text-center">Figure 6: Breakdown of funding sources across all processed listings.</p>
-                            </div>
-                            <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                                <p class="text-sm text-gray-400 mb-2 font-semibold">The International Paywall</p>
-                                <p class="text-gray-300 text-sm leading-relaxed mb-6">While 2,262 listings do not restrict applications to UK nationals, <strong>706 projects</strong> invite international students but strictly cap funding at the "Home Only" fee level — forcing applicants to self-fund a shortfall of roughly <strong>£15,000 per year</strong>. This is largely driven by UKRI policies permitting up to 30% international cohorts but capping financial awards at domestic rates.</p>
-                                <!-- Fig 7 & 8 -->
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <div class="figure-box bg-white/5 rounded-2xl border border-white/10">
-                                        <img src="finding/Figure 7.png" alt="Eligibility by Fee Status" class="zoomable-img">
-                                        <p class="mt-3 text-xs text-gray-500 italic text-center">Figure 7: Eligibility breakdown by student fee status.</p>
-                                    </div>
-                                    <div class="figure-box bg-white/5 rounded-2xl border border-white/10">
-                                        <img src="finding/Figure 8.png" alt="Funded vs International Fees by Institution" class="zoomable-img">
-                                        <p class="mt-3 text-xs text-gray-500 italic text-center">Figure 8: Funded listings vs international fee coverage by institution.</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 1B: Academic Gatekeeping -->
+            <!-- Chapter 2: Global Ambition, National Restrictions -->
             <section>
                 <div class="flex flex-col lg:flex-row-reverse gap-16 items-start">
                     <div class="lg:w-1/3 sticky top-32">
                         <div class="p-4 bg-uob-red rounded-2xl text-white w-16 h-16 flex items-center justify-center mb-8 shadow-2xl shadow-red-200">
-                            <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                            <i data-lucide="globe" class="w-8 h-8"></i>
                         </div>
                         <p class="section-label mb-3">Chapter 2</p>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Academic Gatekeeping & Symbols</h2>
-                        <p class="text-gray-500 leading-relaxed">
-                            Is AI an institutionally closed domain? Our analysis shows a shift from rigid grade requirements to "implicit" technical filters and a visible gender void in leadership. Despite some softening of formal barriers, informal mechanisms persist.
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Global Ambition, National Restrictions</h2>
+                        <p class="text-gray-500 leading-relaxed mb-6">
+                            Despite the advertised openness of UK PhD listings, a systemic financial trap emerges for international applicants. Institutional ambition collides with national funding policy, leaving overseas talent systematically priced out.
                         </p>
+                        <div class="bg-red-50 border border-red-100 rounded-2xl p-5 text-sm text-red-700 leading-relaxed">
+                            <strong>706 projects</strong> invite international applicants but cap funding at Home-only rates — forcing students to self-fund a shortfall of roughly <strong>£15,000 per year</strong>.
+                        </div>
                     </div>
 
                     <div class="lg:w-2/3 space-y-12">
-                        <!-- Fig 6 & 7 -->
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="finding-card">
-                                <div class="figure-box">
-                                    <img src="finding/Figure 6.png" alt="Grade requirements" class="zoomable-img">
-                                    <p class="mt-3 text-xs text-gray-400 italic text-center">Figure 6: Academic grade requirements across AI PhD listings.</p>
-                                </div>
-                                <div class="p-8">
-                                    <h4 class="font-bold mb-2">2.1 Softening Grade Pressure</h4>
-                                    <p class="text-xs text-gray-500 leading-relaxed">Increasing institutional acceptance of 2:1 degrees suggests a broad move away from extreme academic exceptionalism at the entry level, though informal selection mechanisms and disciplinary hierarchies persist.</p>
-                                </div>
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="Figure_7.png" alt="Eligibility by fee status" class="zoomable-img">
+                                <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 7: Eligibility breakdown by student fee status.</p>
                             </div>
-                            <div class="finding-card">
-                                <div class="figure-box">
-                                    <img src="finding/Figure 7.png" alt="Experience acceptance" class="zoomable-img">
-                                    <p class="mt-3 text-xs text-gray-400 italic text-center">Figure 7: Acceptance of equivalent professional experience.</p>
-                                </div>
-                                <div class="p-8">
-                                    <h4 class="font-bold mb-2">2.2 The Professional Gap</h4>
-                                    <p class="text-xs text-gray-500 leading-relaxed">Only <strong>~35%</strong> of listings explicitly value prior professional experience, indicating that alternative pathways into doctoral study remain limited and academic credentials continue to dominate as the primary evaluation mechanism.</p>
-                                </div>
+                            <div class="p-10">
+                                <h3 class="text-2xl font-bold mb-4">2.1 The Advertised Openness</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Fee coverage for funded roles is split almost evenly between Home-only (829) and International (821) students. A high degree of advertised openness exists: <strong>2,262 listings</strong> do not explicitly restrict applications to UK nationals. However, this surface openness conceals a deep structural barrier.
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    UKRI rules permit up to 30% of a cohort to be international students, but cap financial awards at the domestic fee rate. Unless the host university absorbs the difference, international applicants are legally permitted to apply but systematically priced out — forced to self-fund a tuition shortfall of roughly £15,000 per year.
+                                </p>
                             </div>
                         </div>
 
-                        <!-- Fig 8, 9, 10 -->
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:border-uob-red transition">
-                                <div class="figure-box bg-gray-50 rounded-2xl mb-6 -mx-2">
-                                    <img src="finding/Figure 8.png" class="zoomable-img rounded-xl">
-                                </div>
-                                <h5 class="font-bold text-sm mb-2">2.3 The Paywall Trap</h5>
-                                <p class="text-[10px] text-gray-400 uppercase font-black mb-3 tracking-widest">Elitist Language</p>
-                                <p class="text-xs text-gray-500 leading-relaxed">References to "world-class" institutions are relatively uncommon overall, suggesting that symbolic signalling of prestige is not a dominant feature of AI PhD listings.</p>
-                                <p class="mt-2 text-xs text-gray-400 italic">Figure 8: Prevalence of elitist language by institution.</p>
-                            </div>
-                            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:border-uob-red transition">
-                                <div class="figure-box bg-gray-50 rounded-2xl mb-6 -mx-2">
-                                    <img src="finding/Figure 9.png" class="zoomable-img rounded-xl">
-                                </div>
-                                <h5 class="font-bold text-sm mb-2">2.4 Networking Hurdle</h5>
-                                <p class="text-[10px] text-gray-400 uppercase font-black mb-3 tracking-widest">Social Capital</p>
-                                <p class="text-xs text-gray-500 leading-relaxed">A subset of universities requires students to contact supervisors before applying, which can act as a gatekeeping mechanism for applicants without established academic networks.</p>
-                                <p class="mt-2 text-xs text-gray-400 italic">Figure 9: Pre-application networking requirements.</p>
-                            </div>
-                            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:border-uob-red transition">
-                                <div class="figure-box bg-gray-50 rounded-2xl mb-6 -mx-2">
-                                    <img src="finding/Figure 10.png" class="zoomable-img rounded-xl">
-                                </div>
-                                <h5 class="font-bold text-sm mb-2">2.5 Passive Inclusion</h5>
-                                <p class="text-[10px] text-gray-400 uppercase font-black mb-3 tracking-widest">EDI Framing</p>
-                                <p class="text-xs text-gray-500 leading-relaxed">Diversity statements are overwhelmingly passive "encouragements" rather than actionable support frameworks. No listings contain explicit references to neurodiversity support.</p>
-                                <p class="mt-2 text-xs text-gray-400 italic">Figure 10: Presence and framing of diversity initiatives.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fig 11: Gender Void -->
-                        <div class="finding-card p-12 bg-gray-900 text-white relative overflow-hidden">
-                            <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-                                <div>
-                                    <h3 class="text-3xl font-black mb-6 leading-tight">The Visible "Gender Void"</h3>
-                                    <p class="text-gray-400 mb-6 leading-relaxed">
-                                        Our analysis of 1,065 UK AI PhD ads confirms that supervisory leadership remains overwhelmingly male-dominated. The market is dominated by presumed male-only supervisory teams. Research confirms that the lack of visible female role models significantly lowers <strong>AI self-efficacy</strong> of female applicants, potentially causing them to self-select out of the field before they even apply.
-                                    </p>
-                                    <div class="space-y-3">
-                                        <div class="inline-flex items-center space-x-3 p-4 bg-white/10 rounded-xl border border-white/10">
-                                            <i data-lucide="eye-off" class="w-5 h-5 text-red-400 flex-shrink-0"></i>
-                                            <span class="text-xs font-bold">0% explicit mention of neurodiversity support across the entire dataset.</span>
-                                        </div>
-                                        <p class="text-xs text-gray-500 leading-relaxed italic">Note: Gender inference relies on probabilistic name associations. Results should be treated as indicative patterns rather than definitive measures.</p>
-                                    </div>
-                                </div>
-                                <div class="figure-box bg-white/5 p-4 rounded-3xl">
-                                    <img src="finding/Figure 11.png" alt="Supervisor gender composition" class="zoomable-img">
-                                    <p class="mt-4 text-[10px] text-gray-500 italic text-center">Figure 11: Inferred gender composition of AI PhD supervisory teams.</p>
-                                </div>
+                        <div class="bg-gray-900 text-white rounded-3xl p-10">
+                            <p class="section-label text-red-400 mb-3">The International Paywall</p>
+                            <h3 class="text-2xl font-bold mb-6">False Hope by Institution</h3>
+                            <p class="text-gray-400 leading-relaxed mb-8">The stacked bar chart below illustrates the "false hope" funding trap — comparing fully funded positions against the volume of projects that invite international applicants but leave them to cover significant fee shortfalls.</p>
+                            <div class="figure-box bg-white/5 rounded-2xl border border-white/10">
+                                <img src="Figure_8.png" alt="Funded vs International Fees by Institution" class="zoomable-img">
+                                <p class="mt-3 text-xs text-gray-500 italic text-center">Figure 8: Funded listings vs international fee coverage by institution. The University of Bristol is highlighted for case-study context.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 1C: Implicit Technical Gate -->
+            <!-- Chapter 3: Lesser Grade Pressure -->
+            <section>
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+                    <div class="lg:w-1/3 sticky top-32">
+                        <div class="p-4 bg-gray-900 rounded-2xl text-white w-16 h-16 flex items-center justify-center mb-8 shadow-2xl">
+                            <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                        </div>
+                        <p class="section-label mb-3">Chapter 3</p>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Lesser Grade Pressure</h2>
+                        <p class="text-gray-500 leading-relaxed mb-6">
+                            It is often presumed that pursuing postgraduate studies requires a First-Class degree. However, most universities now accept candidates with a 2:1, suggesting a broad institutional shift away from rigid academic exceptionalism at the point of entry.
+                        </p>
+                        <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm text-sm text-gray-500 leading-relaxed italic">
+                            Formal degree requirements may not reflect informal shortlisting practices or competitive dynamics among applicants.
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 space-y-12">
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="Figure_9.png" alt="Academic grade requirements by institution" class="zoomable-img">
+                                <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 9: Academic grade requirements across AI PhD listings — a comparison of formal degree expectations across universities.</p>
+                            </div>
+                            <div class="p-10">
+                                <h3 class="text-2xl font-bold mb-4">3.1 Softening Entry Standards</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    The overwhelming dominance of the unspecified degree requirement (grey bar) and broad acceptance of 2:1 degrees illustrates a broad institutional shift. Only a small minority of listings explicitly demand First-Class honours, suggesting that formal grade-based gatekeeping is declining.
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    We must be cautious however: the absence of strict formal requirements does not necessarily reflect informal shortlisting practices at the institutional level, including supervisory preferences or competitive dynamics among applicants.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="Figure_10.png" alt="Equivalent experience acceptance" class="zoomable-img">
+                                <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 10: Acceptance of equivalent professional experience — showing that nearly two-thirds of listings strictly require formal academic degrees.</p>
+                            </div>
+                            <div class="p-10">
+                                <h3 class="text-2xl font-bold mb-4">3.2 Limited Alternative Pathways</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Beyond degree classifications, alternative routes into doctoral study remain limited. Only around <strong>34.2%</strong> of listings explicitly recognise equivalent practical or professional experience as a valid basis for assessing research suitability.
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    Despite some movement toward flexibility in formal requirements, academic credentials continue to dominate as the primary mechanism for evaluating candidates. The majority of listings — <strong>65.8%</strong> — require a degree only, with no recognition of professional equivalence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 4: Application Processes & Diversity Initiatives -->
+            <section>
+                <div class="flex items-center space-x-4 mb-16">
+                    <div class="p-3 bg-gray-100 rounded-xl text-gray-900 shadow-sm">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <p class="section-label">Chapter 4</p>
+                        <h2 class="text-4xl font-bold tracking-tight">Application Processes and Diversity Initiatives</h2>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 mb-12">
+                    <div class="finding-card">
+                        <div class="figure-box">
+                            <img src="Figure_11.png" alt="Elitist language / buzzwords by institution" class="zoomable-img">
+                            <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 11: Prevalence of elitist language by institution — average buzzwords per listing.</p>
+                        </div>
+                        <div class="p-10">
+                            <h3 class="text-xl font-bold mb-4">4.1 Prestige Signalling</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Elitist keywords such as references to "world-class" institutions or "leading" research environments are relatively uncommon overall. This suggests that symbolic signalling of prestige is not a dominant feature of AI PhD listings, though a small subset of universities — notably Sheffield and Durham — stand out with notably higher average buzzwords per listing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="finding-card">
+                        <div class="figure-box">
+                            <img src="Figure_12.png" alt="Must contact first vs open application" class="zoomable-img">
+                            <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 12: Pre-application networking requirements — listings requiring supervisor contact before applying vs open applications.</p>
+                        </div>
+                        <div class="p-10">
+                            <h3 class="text-xl font-bold mb-4">4.2 The Networking Hurdle</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                A subset of universities requires students to contact supervisors before applying. While often framed as early engagement, such requirements can create a barrier for candidates with limited prior academic networks or confidence in approaching senior academics — functioning as an additional gatekeeping mechanism for those without social capital.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="Figure_13.png" alt="Diversity initiative tiers" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 13: Presence and framing of diversity initiatives — None, Tier B (Passive), and Tier A (Active).</p>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-xl font-bold mb-4">4.3 Passive Inclusion Dominates</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            We examined the presence and framing of diversity initiatives within PhD listings, distinguishing between <em>active</em> diversity language (concrete measures such as guaranteed interviews or targeted bursaries) and <em>passive</em> diversity language (generic encouragements with no actionable support).
+                        </p>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                            The vast majority of listings — over 1,300 — contain no diversity statement. Of those that do, passive Tier B language (~800 listings) far outweighs active Tier A provisions (~200 listings). This absence is striking given the growing institutional emphasis on equality, diversity and inclusion in UK higher education.
+                        </p>
+                        <div class="bg-red-50 border border-red-100 rounded-xl p-4 text-sm text-red-700">
+                            <strong>Notable gap:</strong> Across the entire dataset, we found no explicit references to neurodiversity — suggesting that neurodivergent applicants remain largely invisible within the recruitment discourse of AI PhD programmes.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 5: Gender Representation -->
+            <section>
+                <div class="finding-card p-12 bg-gray-900 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center space-x-4 mb-12">
+                            <div class="p-3 bg-white/10 rounded-xl">
+                                <i data-lucide="user-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="section-label text-red-400">Chapter 5</p>
+                                <h2 class="text-4xl font-bold tracking-tight">Gender Representation</h2>
+                            </div>
+                        </div>
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h3 class="text-3xl font-black mb-6 leading-tight">The Visible "Gender Void"</h3>
+                                <p class="text-gray-400 mb-6 leading-relaxed">
+                                    The data reveals a stark gender void in AI supervision. The market is dominated by presumed all-male supervisory teams, accounting for the largest single category at ~38%. Research confirms that the lack of visible female role models significantly lowers <strong>AI self-efficacy</strong> of female applicants, potentially causing them to self-select out of the field before they even apply.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="inline-flex items-center space-x-3 p-4 bg-white/10 rounded-xl border border-white/10">
+                                        <i data-lucide="eye-off" class="w-5 h-5 text-red-400 flex-shrink-0"></i>
+                                        <span class="text-xs font-bold">0% explicit mention of neurodiversity support across the entire dataset.</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 leading-relaxed italic">Note: Gender inference relies on probabilistic name associations. Results should be treated as indicative patterns rather than definitive measures of supervisory team composition.</p>
+                                </div>
+                            </div>
+                            <div class="figure-box bg-white/5 p-4 rounded-3xl">
+                                <img src="Figure_14.png" alt="Supervisor gender composition" class="zoomable-img">
+                                <p class="mt-4 text-[10px] text-gray-500 italic text-center">Figure 14: Inferred gender composition of AI PhD supervisory teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 6: Discipline Requirement -->
             <section>
                 <div class="flex items-center space-x-4 mb-16">
                     <div class="p-3 bg-gray-100 rounded-xl text-gray-900 shadow-sm">
                         <i data-lucide="binary" class="w-8 h-8"></i>
                     </div>
                     <div>
-                        <p class="section-label">Chapter 3</p>
-                        <h2 class="text-4xl font-bold tracking-tight">The Implicit Technical Gate</h2>
+                        <p class="section-label">Chapter 6</p>
+                        <h2 class="text-4xl font-bold tracking-tight">Discipline Requirement</h2>
                     </div>
                 </div>
 
@@ -548,19 +633,19 @@
                     <div class="space-y-10">
                         <div class="finding-card">
                             <div class="figure-box">
-                                <img src="finding/Figure 12.png" alt="Disciplinary Tunnel Vision" class="zoomable-img">
-                                <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 12: "Tunnel vision" in academic degree requirements.</p>
+                                <img src="Figure_15.png" alt="Disciplinary Tunnel Vision by institution" class="zoomable-img">
+                                <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 15: Disciplinary framing across institutions — Tunnel Vision vs Broad eligibility.</p>
                             </div>
                             <div class="p-10">
-                                <h3 class="text-xl font-bold mb-4">3.1 Disciplinary Tunnel Vision</h3>
+                                <h3 class="text-xl font-bold mb-4">6.1 Disciplinary Openness</h3>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    Contrary to common assumptions, AI PhD programmes are relatively open in disciplinary framing. Only <strong>96 openings</strong> were classified as exhibiting explicit "disciplinary tunnel vision," where eligibility was restricted to narrow technical degrees. Most projects appear open on paper, yet they filter candidates through project descriptions and implied technical competencies.
+                                    Contrary to common assumptions, AI PhD programmes are relatively open in disciplinary framing. Only <strong>96 openings</strong> were classified as exhibiting explicit "disciplinary tunnel vision," where eligibility was restricted to a narrow set of technical degrees. Most projects appear open on paper, yet they filter candidates through implied technical competencies embedded within project descriptions.
                                 </p>
                             </div>
                         </div>
 
                         <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm">
-                            <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 1: Technical Requirements Summary</h4>
+                            <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 2: Technical Requirements Mentioned in the Data</h4>
                             <table class="data-table">
                                 <thead>
                                     <tr><th>Requirement Type</th><th>Count</th><th>Percentage</th></tr>
@@ -579,19 +664,19 @@
                     <div class="space-y-10">
                         <div class="finding-card">
                             <div class="figure-box">
-                                <img src="finding/Figure 13.png" alt="Programming languages" class="zoomable-img">
-                                <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 13: Most frequently required programming languages.</p>
+                                <img src="Figure_16.png" alt="Programming languages mentioned" class="zoomable-img">
+                                <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 16: Most frequently required programming languages — Python dominates overwhelmingly.</p>
                             </div>
                             <div class="p-10">
-                                <h3 class="text-xl font-bold mb-4">3.2 The Python Barrier</h3>
+                                <h3 class="text-xl font-bold mb-4">6.2 The Python Barrier</h3>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    Python is the undisputed gatekeeper language. <strong>22.4%</strong> of listings explicitly mandate coding proficiency, signalling a shift from formal degrees to "assumed technical fluency." This suggests a transition from overt disciplinary exclusion to a system structured around assumed computational capital, which may differentially disadvantage applicants from non-technical backgrounds.
+                                    Python is the undisputed gatekeeper language with over 400 listings. <strong>22.4%</strong> of listings explicitly mandate coding proficiency, signalling a shift from formal degrees to "assumed technical fluency." This suggests a transition from overt disciplinary exclusion to a system structured around assumed computational capital, which may differentially disadvantage applicants from non-technical backgrounds.
                                 </p>
                             </div>
                         </div>
 
                         <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm">
-                            <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 2: Disciplinary Framing Comparison</h4>
+                            <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 3: Comparison of Technical Skills and Educational Background Between Areas of AI Study</h4>
                             <div class="overflow-x-auto">
                                 <table class="data-table">
                                     <thead>
@@ -613,9 +698,9 @@
 
                 <!-- Summary banner -->
                 <div class="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-10 text-white">
-                    <h3 class="text-2xl font-bold mb-4">Chapter 3 Summary</h3>
+                    <h3 class="text-2xl font-bold mb-4">Chapter 6 Summary</h3>
                     <p class="text-gray-300 leading-relaxed max-w-3xl">
-                        Taken together, AI PhD listings in the UK are relatively open in formal disciplinary framing, but this formal inclusivity coexists with implicit skill-based filtering. Programming competence and familiarity with computational frameworks are frequently embedded within project descriptions. Access is shaped less by degree classification and more by prior exposure to technical practices — reinforcing the core rationale behind AI literacy interventions like the JGI training programme.
+                        Taken together, AI PhD listings in the UK are relatively open in formal disciplinary framing. Explicit restrictions to computer science or mathematics degrees are rare, and most projects do not impose hard technical requirements. However, this formal inclusivity coexists with implicit skill-based filtering — programming competence and familiarity with computational frameworks are frequently embedded within project descriptions. Access is shaped less by degree classification and more by prior exposure to technical practices, reinforcing the core rationale behind AI literacy interventions like the JGI training programme.
                     </p>
                 </div>
             </section>
@@ -1370,42 +1455,32 @@
             if (el) observer.observe(el);
         });
 
-        // ── Image Zoom on Hover ──
+        // ── Image Zoom on Click ──
         const overlay  = document.getElementById('img-zoom-overlay');
         const zoomImg  = document.getElementById('zoom-img');
-        let hideTimer  = null;
 
         function showZoom(src, alt) {
-            clearTimeout(hideTimer);
             zoomImg.src = src;
             zoomImg.alt = alt || '';
             overlay.classList.add('active');
         }
 
-        function scheduleHide() {
-            hideTimer = setTimeout(() => {
-                overlay.classList.remove('active');
-                zoomImg.src = '';
-            }, 120);
+        function hideZoom() {
+            overlay.classList.remove('active');
+            zoomImg.src = '';
         }
 
-        // Attach hover listeners to all zoomable images
+        // Attach click listeners to all zoomable images
         function attachZoom() {
             document.querySelectorAll('.zoomable-img, .figure-box img').forEach(img => {
                 if (img.dataset.zoomAttached) return;
                 img.dataset.zoomAttached = 'true';
-                img.addEventListener('mouseenter', () => showZoom(img.src, img.alt));
-                img.addEventListener('mouseleave', scheduleHide);
+                img.addEventListener('click', () => showZoom(img.src, img.alt));
             });
         }
 
-        // Keep overlay open while hovering over it
-        overlay.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-        overlay.addEventListener('mouseleave', scheduleHide);
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('active');
-            zoomImg.src = '';
-        });
+        // Click overlay to close
+        overlay.addEventListener('click', hideZoom);
 
         // Initial attach zoom
         attachZoom();
