@@ -18,9 +18,7 @@
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
-
-
-    <!-- Navigation (Updated) -->
+    <!-- Navigation -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -29,20 +27,17 @@
                     <span class="font-bold text-xl tracking-tight hidden sm:block">AI Barriers Project</span>
                 </a>
             </div>
-            <!-- Updated Navigation Links: All 6 sections included -->
             <div class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-600">
                 <a href="index.html" class="hover:text-red-600 transition">Home</a>
                 <a href="literature.html" class="hover:text-red-600 transition">Literature Review</a>
-                <!-- Methodology is active/red on this page -->
                 <a href="methodology.html" class="text-uob-red border-b-2 border-uob-red pb-1">Methodology</a>
                 <a href="findings.html" class="hover:text-red-600 transition">Findings</a>
                 <a href="resources.html" class="hover:text-red-600 transition">Resources Hub</a>
                 <a href="team.html" class="hover:text-red-600 transition">Team</a>
             </div>
-            <a href="mailto:uob-AIbarriers-project@bristol.ac.uk" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">Contact Us</a>
+            <a href="team.html#contact" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">Contact Us</a>
         </div>
     </nav>
-
 
     <!-- Header -->
     <header class="pt-32 pb-16 bg-white border-b border-gray-100">
@@ -55,7 +50,7 @@
                 Research <span class="text-red-700">Methodology</span>
             </h1>
             <p class="text-xl text-gray-600 leading-relaxed max-w-3xl">
-                We employed a robust sequential mixed-methods design, moving from theoretical scoping and large-scale data scraping to educational interventions and depth analysis.
+                We employed a pragmatic, sequential mixed-methods design — combining quantitative pre/post surveys with qualitative structured interviews — to explore socioeconomic and individual barriers to AI postgraduate study.
             </p>
         </div>
     </header>
@@ -68,7 +63,7 @@
             <div class="sticky top-32 space-y-4">
                 <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Pipeline Stages</h3>
                 <a href="#phase1" class="block text-sm font-medium text-gray-600 hover:text-red-600 transition pl-3 border-l-2 border-transparent hover:border-red-600">1. Literature Review</a>
-                <a href="#phase2" class="block text-sm font-medium text-gray-600 hover:text-red-600 transition pl-3 border-l-2 border-transparent hover:border-red-600">2. Data Scraping</a>
+                <a href="#phase2" class="block text-sm font-medium text-gray-600 hover:text-red-600 transition pl-3 border-l-2 border-transparent hover:border-red-600">2. Sample &amp; Recruitment</a>
                 <a href="#phase3" class="block text-sm font-medium text-gray-600 hover:text-red-600 transition pl-3 border-l-2 border-transparent hover:border-red-600">3. Training Intervention</a>
                 <a href="#phase4" class="block text-sm font-medium text-gray-600 hover:text-red-600 transition pl-3 border-l-2 border-transparent hover:border-red-600">4. Quantitative Surveys</a>
                 <a href="#phase5" class="block text-sm font-medium text-gray-600 hover:text-red-600 transition pl-3 border-l-2 border-transparent hover:border-red-600">5. Interviews</a>
@@ -96,7 +91,7 @@
                         </div>
                         <div class="prose prose-red text-gray-600">
                             <p>
-                                <strong>Foundation:</strong> Our theoretical framework identified three core dimensions of exclusion that guided the entire project design.
+                                <strong>Foundation:</strong> Our theoretical framework, grounded in a pragmatic paradigm (Islam, 2022), identified three core dimensions of exclusion that guided the entire project design, framing hypotheses around EDI in AI postgraduate studies.
                             </p>
 
                             <!-- Three Theme Boxes -->
@@ -114,7 +109,7 @@
                                 <div class="bg-red-50 p-4 rounded-xl border border-red-100 text-center">
                                     <i data-lucide="building" class="w-6 h-6 text-red-600 mx-auto mb-2"></i>
                                     <h4 class="font-bold text-sm text-gray-900">Structural</h4>
-                                    <p class="text-xs text-gray-500 mt-1">Policy & Funding</p>
+                                    <p class="text-xs text-gray-500 mt-1">Policy &amp; Funding</p>
                                 </div>
                             </div>
 
@@ -127,7 +122,7 @@
                 </div>
             </section>
 
-            <!-- Phase 2: Data Scraping -->
+            <!-- Phase 2: Sample & Recruitment -->
             <section id="phase2" class="scroll-mt-32 relative z-10">
                 <div class="flex items-start space-x-6">
                     <div class="hidden md:flex flex-col items-center">
@@ -135,28 +130,33 @@
                     </div>
                     <div class="flex-1 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                         <div class="flex items-center space-x-3 mb-6">
-                            <i data-lucide="database" class="w-6 h-6 text-red-600"></i>
-                            <h2 class="text-2xl font-bold text-gray-900">Data Scraping & NLP Pipeline</h2>
+                            <i data-lucide="users" class="w-6 h-6 text-red-600"></i>
+                            <h2 class="text-2xl font-bold text-gray-900">Sample &amp; Recruitment</h2>
                         </div>
                         <div class="prose prose-red text-gray-600">
                             <p>
-                                To empirically map the structural landscape, we developed a custom <strong>Natural Language Processing (NLP)</strong> pipeline.
+                                Data was collected from <strong>self-selecting participants</strong> drawn from students attending the <em>"Getting Started in AI"</em> training programme run by the Jean Golding Institute at the University of Bristol.
                             </p>
                             <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 my-4">
-                                <ul class="space-y-3 text-sm">
-                                    <li class="flex items-start">
-                                        <i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2 mt-0.5"></i>
-                                        <span><strong>Dataset:</strong> 2,643 live PhD listings scraped from <em>FindAPhD.com</em>.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2 mt-0.5"></i>
-                                        <span><strong>N-Gram Analysis:</strong> Identified recurring linguistic patterns (Bigrams/Trigrams) in funding criteria.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2 mt-0.5"></i>
-                                        <span><strong>Critical Insight:</strong> Revealed the "False Hope" barrier—where projects advertise as "Worldwide" but lack visa sponsorship funding.</span>
-                                    </li>
+                                <h4 class="font-bold text-gray-800 text-sm mb-3">Eligibility Criteria</h4>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0"></i>Aged 18 or over</li>
+                                    <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0"></i>Undergraduate students at the University of Bristol</li>
+                                    <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0"></i>Confirmed attendees of the "Getting Started in AI" training</li>
                                 </ul>
+                            </div>
+                            <p class="text-sm">
+                                To maximise participation, all confirmed attendees were contacted by email about the optional surveys, and time was allocated within sessions to complete them. The programme ran across <strong>two sessions</strong>, each delivered to two cohorts (A and B) due to room capacity constraints of 30 attendees per session. The research team supervised both cohorts and confirmed no significant differences in delivery between them.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mt-4">
+                                <div class="bg-red-50 p-4 rounded-xl border border-red-100 text-center">
+                                    <span class="text-3xl font-black text-red-700">2</span>
+                                    <p class="text-xs text-gray-600 mt-1 font-medium">Training Sessions</p>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-xl border border-red-100 text-center">
+                                    <span class="text-3xl font-black text-red-700">30</span>
+                                    <p class="text-xs text-gray-600 mt-1 font-medium">Max per Cohort</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,30 +176,30 @@
                         </div>
                         <div class="prose prose-red text-gray-600">
                             <p>
-                                The <strong>"Getting Started in AI"</strong> course, co-designed with the <em>Jean Golding Institute (JGI)</em>, served as a live laboratory to observe shifts in student self-efficacy.
+                                The <strong>"Getting Started in AI"</strong> course, run by the <em>Jean Golding Institute (JGI)</em>, served as the intervention. The programme focused on <strong>AI literacy</strong> rather than directly addressing all identified barriers to doctoral study — a scope distinction that shaped subsequent data collection and analysis.
                             </p>
 
                             <div class="grid md:grid-cols-2 gap-6 mt-6">
                                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
                                     <div class="flex justify-between items-center mb-3">
-                                        <h4 class="font-bold text-gray-900 text-sm">Session 1: Foundations</h4>
-                                        <span class="bg-white text-xs px-2 py-1 rounded border shadow-sm">2.5 Hrs</span>
+                                        <h4 class="font-bold text-gray-900 text-sm">Session 1</h4>
+                                        <span class="bg-white text-xs px-2 py-1 rounded border shadow-sm">Cohorts A &amp; B</span>
                                     </div>
                                     <ul class="text-xs space-y-2 text-gray-600">
-                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>Demystifying the "Black Box"</li>
-                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>Supervised vs. Unsupervised</li>
-                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>LLMs & Transformers</li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>AI concepts &amp; foundations</li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>Pre-training survey completed</li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>Post-training survey window opens</li>
                                     </ul>
                                 </div>
                                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
                                     <div class="flex justify-between items-center mb-3">
-                                        <h4 class="font-bold text-gray-900 text-sm">Session 2: Hands-on Python</h4>
-                                        <span class="bg-white text-xs px-2 py-1 rounded border shadow-sm">2.0 Hrs</span>
+                                        <h4 class="font-bold text-gray-900 text-sm">Session 2</h4>
+                                        <span class="bg-white text-xs px-2 py-1 rounded border shadow-sm">Cohorts A &amp; B</span>
                                     </div>
                                     <ul class="text-xs space-y-2 text-gray-600">
-                                        <li class="flex items-start"><i data-lucide="code" class="w-3 h-3 text-blue-500 mr-2 mt-1"></i>Pandas Data Exploration</li>
-                                        <li class="flex items-start"><i data-lucide="code" class="w-3 h-3 text-blue-500 mr-2 mt-1"></i>Scikit-learn Classifiers</li>
-                                        <li class="flex items-start"><i data-lucide="code" class="w-3 h-3 text-blue-500 mr-2 mt-1"></i>Intro to PyTorch</li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>Applied AI skills</li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>Interview invitations issued</li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-3 h-3 text-green-500 mr-2 mt-1"></i>Post-training survey reminder</li>
                                     </ul>
                                 </div>
                             </div>
@@ -221,15 +221,31 @@
                         </div>
                         <div class="prose prose-red text-gray-600">
                             <p>
-                                A longitudinal <strong>Pre- and Post-test design</strong> tracked quantitative shifts in student attitudes before and after training.
+                                A longitudinal <strong>pre- and post-test design</strong> tracked quantitative shifts in student attitudes and AI literacy before and after training. The pre-training survey was administered in the days before the programme; the post-training survey was offered after Session 1 with a two-week completion window.
                             </p>
+
+                            <!-- Hypotheses -->
+                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 mt-4 mb-4">
+                                <h4 class="font-bold text-gray-800 text-sm mb-3">Hypotheses Tested</h4>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li><span class="font-bold text-red-700">H1</span> — Does the AI training programme increase attendees' interest in AI study?</li>
+                                    <li><span class="font-bold text-red-700">H2</span> — Does the AI training programme increase attendees' AI literacy?</li>
+                                    <li><span class="font-bold text-red-700">H3</span> — Is there any difference in interest in AI study based on SES?</li>
+                                    <li><span class="font-bold text-red-700">H4</span> — Do STEM students show higher AI literacy than non-STEM students before and after training?</li>
+                                </ul>
+                            </div>
+
                             <div class="bg-red-50 p-4 rounded-xl border border-red-100 mt-4">
                                 <h4 class="font-bold text-red-800 text-sm mb-2">Instruments Used</h4>
                                 <ul class="list-disc pl-4 text-xs text-red-800 space-y-1">
-                                    <li><strong>AILIT-S Framework:</strong> Adapted from Hornberger et al. (2025) to measure perceived technical competence.</li>
-                                    <li><strong>Likert Scales:</strong> 5-point agreement scales (e.g., <em>"I feel confident explaining AI concepts"</em>).</li>
+                                    <li><strong>AI-LITS (Short Version):</strong> The AI Literacy Scale (Hornberger et al., 2025) measured AI literacy pre- and post-training, with question order altered in the post survey to reduce recognition bias.</li>
+                                    <li><strong>DAISY SES Indicators:</strong> Ethnic background, gender, caregivers' education, and current occupation — based on DAISY (2022) guidance and Census 2021 categories.</li>
+                                    <li><strong>Likert Scales:</strong> Five-point agreement scales measured student attitudes towards using and studying AI, and motivation for attending the training.</li>
                                 </ul>
                             </div>
+                            <p class="text-sm mt-4">
+                                Descriptive statistics were used to evaluate the intervention's impact: mean and range were compared for AI literacy scores; mode and range for agreement scale items. Demographic questions appeared only in the pre-training survey as these factors were not expected to change between surveys.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -244,14 +260,23 @@
                     <div class="flex-1 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                         <div class="flex items-center space-x-3 mb-6">
                             <i data-lucide="mic" class="w-6 h-6 text-red-600"></i>
-                            <h2 class="text-2xl font-bold text-gray-900">Qualitative Interviews</h2>
+                            <h2 class="text-2xl font-bold text-gray-900">Structured Interviews</h2>
                         </div>
                         <div class="prose prose-red text-gray-600">
                             <p>
-                                Following the surveys, we conducted <strong>semi-structured interviews</strong> (45-60 mins) via Microsoft Teams.
+                                Survey participants were invited to attend <strong>structured online interviews</strong> (up to 60 mins) via Microsoft Teams following Session 2, guided by three qualitative research questions:
                             </p>
+
+                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 mt-4 mb-4">
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li><span class="font-bold text-red-700">RQ1</span> — What do participants perceive as barriers and enablers for studying AI following the training?</li>
+                                    <li><span class="font-bold text-red-700">RQ2</span> — How do career expectations influence their choices around postgraduate study after training?</li>
+                                    <li><span class="font-bold text-red-700">RQ3</span> — How does institutional policy impact interest in AI studies after attending the training?</li>
+                                </ul>
+                            </div>
+
                             <p class="text-sm">
-                                These sessions allowed us to probe the "why" behind the quantitative data, exploring personal narratives regarding career expectations and institutional trust that numbers alone could not reveal.
+                                Structuring the interviews improved consistency across sessions conducted by different research team members. Each interviewer was accompanied by an <strong>observer</strong> who took field notes — allowing the interviewer to focus on inquiry — which were later used to compare similarity across interviewers. Interviews were automatically transcribed in Microsoft Teams and then reviewed and corrected by hand before analysis.
                             </p>
                         </div>
                     </div>
@@ -271,36 +296,41 @@
                         </div>
                         <div class="prose prose-red text-gray-600">
                             <p>
-                                The final phase involved synthesizing collected data streams to triangulate findings.
+                                The final phase synthesised both data streams to triangulate findings across quantitative and qualitative sources.
                             </p>
                             <ul class="space-y-3 mt-4 text-sm">
                                 <li class="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
-                                    <strong>Qualitative (RTA):</strong> We employed <em>Reflexive Thematic Analysis</em> (Braun & Clarke). An <strong>abductive</strong> approach was used to base codes in extant literature while remaining open to novel student-driven themes.
+                                    <strong>Thematic Analysis (Interviews):</strong> A <em>deductive</em> approach (Clarke &amp; Braun, 2017) was followed due to time constraints. Codes were defined according to prior literature (Fife &amp; Gossner, 2024) on AI policies, admission policies, AI literacy, and socioeconomic barriers, with additional codes derived from pilot interviews. Researchers worked in a shared codebook, reviewing codes asynchronously and in dedicated meetings.
                                 </li>
                                 <li class="bg-green-50 p-3 rounded border-l-4 border-green-400">
-                                    <strong>Quantitative:</strong> Descriptive statistics and paired t-tests identified significant shifts in confidence pre/post training.
+                                    <strong>Content Analysis (Survey Free-text):</strong> An <em>abductive</em> approach (Erlingsson &amp; Brysiewicz, 2017) was applied to free-text survey responses. Predefined codes from the thematic analysis served as the deductive starting point; additional codes were derived from the data to enable frequency analysis across the dataset.
+                                </li>
+                                <li class="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                                    <strong>Quantitative:</strong> Descriptive statistics (mean, mode, range) compared pre- and post-training survey scores across AI literacy items and agreement scales.
                                 </li>
                             </ul>
+                            <p class="text-sm mt-4 text-gray-500">
+                                Note: the JGI training focused on AI literacy rather than other barriers to doctoral study identified in the literature. This partial misalignment meant some codes (e.g., gender inequality, confidentiality concerns) were not addressed in post-training interviews, and admission policy questions could not be explored with an undergraduate sample.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Ethical Compliance (Empty Circle) -->
+            <!-- Ethical Compliance -->
             <section id="ethics" class="scroll-mt-32 relative z-10 pb-20">
                 <div class="flex items-start space-x-6">
                     <div class="hidden md:flex flex-col items-center">
-                        <!-- Empty Circle as requested -->
                         <div class="w-12 h-12 bg-white border-4 border-gray-300 rounded-full flex items-center justify-center shadow-sm z-10">
                             <i data-lucide="shield" class="w-5 h-5 text-gray-400"></i>
                         </div>
                     </div>
                     <div class="flex-1 bg-gray-50 p-8 rounded-2xl shadow-inner border border-gray-200">
                         <div class="flex items-center space-x-3 mb-4">
-                            <h2 class="text-xl font-bold text-gray-800">Ethical Compliance & Incentives</h2>
+                            <h2 class="text-xl font-bold text-gray-800">Ethical Compliance &amp; Incentives</h2>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
-                            Approved by the Faculty of Science and Engineering REC (Ref: 2026-29619). We prioritised fair compensation for student time.
+                            Approved by the University of Bristol Faculty of Science and Engineering's Ethics Committee (Ref: 29619). We prioritised fair compensation for student time. The average pre-training survey took approximately 25 minutes; interviews lasted up to one hour.
                         </p>
                         <div class="flex flex-wrap gap-3">
                             <span class="bg-white px-3 py-1.5 rounded-full text-xs font-bold text-gray-600 border shadow-sm">
@@ -320,13 +350,13 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-medium uppercase tracking-wider opacity-60">
+    <!-- Footer (matching findings.html) -->
+    <footer class="bg-white py-12 px-6 border-t border-gray-100 mt-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 font-medium uppercase tracking-wider">
             <p>&copy; 2026 University of Bristol. EPSRC Funded.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-white transition">Ethics Protocol</a>
-                <a href="#" class="hover:text-white transition">Data Management</a>
+            <div class="flex space-x-6 mt-4 md:mt-0 uppercase font-bold">
+                <a href="index.html" class="hover:text-red-600 transition tracking-tighter text-gray-600">Home</a>
+                <a href="team.html#contact" class="hover:text-red-600 transition tracking-tighter text-gray-600">Contact Team</a>
             </div>
         </div>
     </footer>
