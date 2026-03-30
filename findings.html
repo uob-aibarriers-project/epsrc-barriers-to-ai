@@ -30,29 +30,57 @@
         .finding-card {
             background: white;
             border: 1px solid #F3F4F6;
-            border-radius: 2rem;
+            border-radius: 2.5rem;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .finding-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
             border-color: #E5E7EB;
         }
 
-        .figure-container {
+        .figure-box {
             background: #F9FAFB;
-            padding: 2rem;
+            padding: 2.5rem;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
 
-        .figure-container img {
+        .figure-box img {
             max-width: 100%;
             height: auto;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+        .data-table th {
+            background: #F3F4F6;
+            text-align: left;
+            padding: 1rem;
+            font-weight: 700;
+            color: #374151;
+            border-bottom: 2px solid #E5E7EB;
+        }
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #F3F4F6;
+            color: #4B5563;
+        }
+        .data-table tr:hover { background: #F9FAFB; }
+
+        .stat-highlight {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.05em;
         }
     </style>
 </head>
@@ -80,166 +108,176 @@
     </nav>
 
     <!-- Header -->
-    <header class="pt-40 pb-16 bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-[10px] font-bold uppercase tracking-widest mb-6">
-                <i data-lucide="bar-chart-3" class="w-3 h-3"></i>
-                <span>Mixed-Methods Evidence</span>
+    <header class="pt-40 pb-20 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center lg:text-left">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-[10px] font-bold uppercase tracking-widest mb-8">
+                <i data-lucide="line-chart" class="w-3 h-3"></i>
+                <span>Deep Data Analysis</span>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-                Comprehensive <span class="text-uob-red">Research Findings</span>
+            <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-none tracking-tighter">
+                Mapping the <span class="text-uob-red">Evidence</span>
             </h1>
-            <p class="text-lg text-gray-600 leading-relaxed max-w-3xl border-l-4 border-uob-red pl-6">
-                Bridging structural analysis of 2,643 PhD listings with the impact of literacy interventions and qualitative student experiences.
+            <p class="text-xl text-gray-500 leading-relaxed max-w-3xl border-l-4 border-uob-red pl-8">
+                From institutional market analysis of 2,382 listings to quantifying the impact of AI literacy training. Our data reveals a landscape of structural ambiguity and significant potential for growth.
             </p>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-6 py-16 space-y-32">
+    <main class="max-w-7xl mx-auto px-6 py-24 space-y-48">
 
-        <!-- SECTION 1: STRUCTURAL ANALYSIS (From Word Doc) -->
-        <section id="structural-barriers">
-            <div class="flex items-center space-x-4 mb-12">
-                <div class="p-3 bg-gray-900 rounded-xl text-white shadow-lg">
-                    <i data-lucide="building-2" class="w-8 h-8"></i>
+        <!-- SECTION 1: STRUCTURAL & FINANCIAL BARRIERS -->
+        <section id="section-1">
+            <div class="flex flex-col lg:flex-row gap-16 mb-24 items-start">
+                <div class="lg:w-1/3 sticky top-32">
+                    <div class="p-4 bg-gray-900 rounded-2xl text-white w-16 h-16 flex items-center justify-center mb-8 shadow-2xl">
+                        <i data-lucide="piggy-bank" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">1. Structural & Financial Landscapes</h2>
+                    <p class="text-gray-500 mb-8">
+                        Analysis of recruitment data shows that PhD funding is uneven and uncertain. While many projects are "funded," the mechanisms often exclude those without prior capital.
+                    </p>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm italic text-sm text-gray-600">
+                        "The financial burden remains a substantial barrier to entry, particularly in highly competitive and resource-intensive fields like AI."
+                    </div>
                 </div>
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 tracking-tight">1. Structural Barriers & Market Analysis</h2>
-                    <p class="text-gray-500 text-sm">Analysis of 2,382 unique active PhD listings in the UK.</p>
+
+                <div class="lg:w-2/3 space-y-16">
+                    <!-- Finding 1 -->
+                    <div class="finding-card">
+                        <div class="figure-box">
+                            <img src="finding/Figure 1.png" alt="Funding Status distribution">
+                            <p class="mt-6 text-xs text-gray-400 italic">Figure 1: Breakdown of funding status across UK AI PhD listings.</p>
+                        </div>
+                        <div class="p-10">
+                            <h3 class="text-2xl font-bold mb-4">1.1 The Funding Split</h3>
+                            <p class="text-gray-600 mb-6">
+                                Only <strong>48.6%</strong> of listings provide direct project funding. A significant <strong>21.5%</strong> require students to enter university competitions, introducing a layer of risk and delay for the applicant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Finding 2 & 3 -->
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="finding/Figure 2.png" alt="Stipend Distribution">
+                            </div>
+                            <div class="p-8">
+                                <h4 class="font-bold text-lg mb-2">1.2 Stipend Benchmarks</h4>
+                                <p class="text-sm text-gray-500">Adverts heavily cluster around the UKRI minimum of <strong>£20,780</strong>, with predictable adjustments for London-based institutions.</p>
+                            </div>
+                        </div>
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="finding/Figure 3.png" alt="Top-up presence">
+                            </div>
+                            <div class="p-8">
+                                <h4 class="font-bold text-lg mb-2">1.3 The Top-Up Gap</h4>
+                                <p class="text-sm text-gray-500">Only <strong>30.3%</strong> of listings mention additional funding for professional development, leaving 70% of students without clear support for international conferences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Finding 4 & 5 -->
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="finding/Figure 4.png" alt="Top-up by University">
+                            </div>
+                            <div class="p-8">
+                                <h4 class="font-bold text-lg mb-2">1.4 Institutional Disparities</h4>
+                                <p class="text-sm text-gray-500">The availability of research support varies wildly. Bristol sits in the middle tier (~22%), while Exeter leads with over 60%.</p>
+                            </div>
+                        </div>
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="finding/Figure 5.png" alt="Funding Clarity">
+                            </div>
+                            <div class="p-8">
+                                <h4 class="font-bold text-lg mb-2">1.5 Ambiguity as a Filter</h4>
+                                <p class="text-sm text-gray-500"><strong>15.8%</strong> of listings are vaguely worded. This ambiguity deters applicants who lack institutional insider knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="space-y-16">
-                <!-- Finding 1: Funding Status -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold text-gray-900">1.1 Financial Accessibility</h3>
-                        <p class="text-gray-600">
-                            PhD funding is unevenly distributed. While roughly half of listings offer direct funding, a significant portion (23.1%) remains self-funded or dependent on competitive institutional rounds, creating high uncertainty for applicants.
-                        </p>
-                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-                            <h4 class="text-xs font-bold text-uob-red uppercase mb-2">Key Data Point</h4>
-                            <p class="text-sm font-medium">76.9% of analyzed roles are funded studentships, while 23.1% are unfunded.</p>
-                        </div>
+        <!-- SECTION 2: ACADEMIC GATEKEEPING & THE GENDER VOID -->
+        <section id="section-2">
+            <div class="flex flex-col lg:flex-row-reverse gap-16 mb-24 items-start">
+                <div class="lg:w-1/3 sticky top-32">
+                    <div class="p-4 bg-uob-red rounded-2xl text-white w-16 h-16 flex items-center justify-center mb-8 shadow-2xl shadow-red-200">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
                     </div>
-                    <div class="finding-card">
-                        <div class="figure-container">
-                            <img src="finding/Figure 1.png" alt="Funding status among PhD listings" onerror="this.src='https://placehold.co/600x400?text=Figure+1:+Funding+Status'">
-                        </div>
-                        <div class="p-4 bg-white text-center italic text-xs text-gray-400">Figure 1: Funding status distribution across UK AI PhD listings.</div>
-                    </div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">2. Academic Gatekeeping & Symbols</h2>
+                    <p class="text-gray-500">
+                        Is AI an institutionally closed domain? Our analysis shows a shift from rigid grades to "implicit" technical filters and a visible gender void in leadership.
+                    </p>
                 </div>
 
-                <!-- Finding 2 & 3: Stipends and Top-ups -->
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="finding-card">
-                        <div class="figure-container">
-                            <img src="finding/Figure 2.png" alt="Annual PhD stipends" onerror="this.src='https://placehold.co/600x400?text=Figure+2:+Stipends'">
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold mb-2">1.2 Stipend Alignment</h4>
-                            <p class="text-sm text-gray-500">Adverts largely align with UKRI minimum guidelines, with adjustments for London-based institutions.</p>
-                        </div>
-                    </div>
-                    <div class="finding-card">
-                        <div class="figure-container">
-                            <img src="finding/Figure 3.png" alt="Financial top-ups" onerror="this.src='https://placehold.co/600x400?text=Figure+3:+Top-ups'">
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold mb-2">1.3 The "Top-Up" Gap</h4>
-                            <p class="text-sm text-gray-500">Only 30.3% of adverts mention additional funding for professional development, training, or conferences.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Finding 4 & 5: Institutional Variance -->
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="finding-card">
-                        <div class="figure-container">
-                            <img src="finding/Figure 4.png" alt="Top-up availability by institution" onerror="this.src='https://placehold.co/600x400?text=Figure+4:+Top-up+by+Institution'">
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold mb-2">1.4 Institutional Disparities</h4>
-                            <p class="text-sm text-gray-500">Top-up availability varies significantly across the UK. Bristol sits near the middle at approximately 22%.</p>
-                        </div>
-                    </div>
-                    <div class="finding-card">
-                        <div class="figure-container">
-                            <img src="finding/Figure 5.png" alt="Clarity of funding" onerror="this.src='https://placehold.co/600x400?text=Figure+5:+Funding+Clarity'">
-                        </div>
-                        <div class="p-6">
-                            <h4 class="font-bold mb-2">1.5 Ambiguity as a Barrier</h4>
-                            <p class="text-sm text-gray-500">84.2% of positions offer secured support, but 15% remain vaguely defined, deterring applicants without insider knowledge.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Finding 6 & 7: Academic Gates -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center pt-8">
-                    <div class="finding-card">
-                        <div class="figure-container">
-                            <img src="finding/Figure 6.png" alt="Grade requirements" onerror="this.src='https://placehold.co/600x400?text=Figure+6:+Grade+Requirements'">
-                        </div>
-                        <div class="p-4 bg-white text-center italic text-xs text-gray-400">Figure 6: Shift towards accepting 2:1 degrees over first-class requirements.</div>
-                    </div>
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold text-gray-900">1.6 Evolving Academic Exceptionalism</h3>
-                        <p class="text-gray-600">
-                            There is a visible shift away from requiring a First-Class degree. However, formal flexibility is countered by limited recognition of professional experience (Figure 7).
-                        </p>
+                <div class="lg:w-2/3 space-y-16">
+                    <!-- Finding 6 & 7 -->
+                    <div class="grid md:grid-cols-2 gap-8">
                         <div class="finding-card">
-                            <div class="figure-container">
-                                <img src="finding/Figure 7.png" alt="Professional experience" onerror="this.src='https://placehold.co/600x400?text=Figure+7:+Experience'">
+                            <div class="figure-box">
+                                <img src="finding/Figure 6.png" alt="Grade requirements">
                             </div>
-                            <div class="p-4 bg-white text-center italic text-xs text-gray-400">Figure 7: Only 35% of roles explicitly recognize practical experience.</div>
+                            <div class="p-8 text-center">
+                                <h4 class="font-bold mb-2">2.1 Softening Grade Pressure</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Increasing acceptance of 2:1 degrees suggests a move away from extreme academic exceptionalism at the entry level.</p>
+                            </div>
+                        </div>
+                        <div class="finding-card">
+                            <div class="figure-box">
+                                <img src="finding/Figure 7.png" alt="Experience acceptance">
+                            </div>
+                            <div class="p-8 text-center">
+                                <h4 class="font-bold mb-2">2.2 The Professional Gap</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Only <strong>34.2%</strong> of listings explicitly value prior professional experience, reinforcing academic pathways as the primary route.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Finding 8, 9, 10: Language & Networking -->
-                <div class="grid lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100">
-                        <img src="finding/Figure 8.png" class="w-full mb-6 rounded-lg shadow-sm" onerror="this.src='https://placehold.co/400x300?text=Fig+8'">
-                        <h4 class="font-bold text-sm mb-2">Prestige Signaling</h4>
-                        <p class="text-xs text-gray-500">Elite keywords like "world-class" are relatively uncommon, suggesting symbolic prestige is not the primary gatekeeper.</p>
+                    <!-- Finding 8, 9, 10 -->
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:border-uob-red transition">
+                            <img src="finding/Figure 8.png" class="mb-6 rounded-lg">
+                            <h5 class="font-bold text-sm mb-2">2.3 The Paywall Trap</h5>
+                            <p class="text-[10px] text-gray-400 uppercase font-black mb-3 tracking-widest">Structural Misalignment</p>
+                            <p class="text-xs text-gray-500">95% of listings are open to global talent, but few cover the ~£15k fee shortfall for international students.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:border-uob-red transition">
+                            <img src="finding/Figure 9.png" class="mb-6 rounded-lg">
+                            <h5 class="font-bold text-sm mb-2">2.4 Networking Hurdle</h5>
+                            <p class="text-[10px] text-gray-400 uppercase font-black mb-3 tracking-widest">Social Capital</p>
+                            <p class="text-xs text-gray-500">Mandating pre-application contact with supervisors acts as a barrier for those without established academic networks.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:border-uob-red transition">
+                            <img src="finding/Figure 10.png" class="mb-6 rounded-lg">
+                            <h5 class="font-bold text-sm mb-2">2.5 Passive Inclusion</h5>
+                            <p class="text-[10px] text-gray-400 uppercase font-black mb-3 tracking-widest">EDI Framing</p>
+                            <p class="text-xs text-gray-500">Diversity statements are overwhelmingly passive "encouragements" rather than actionable support frameworks.</p>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100">
-                        <img src="finding/Figure 9.png" class="w-full mb-6 rounded-lg shadow-sm" onerror="this.src='https://placehold.co/400x300?text=Fig+9'">
-                        <h4 class="font-bold text-sm mb-2">Social Capital Barrier</h4>
-                        <p class="text-xs text-gray-500">Requirements to contact supervisors before applying create a hurdle for those without established academic networks.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100">
-                        <img src="finding/Figure 10.png" class="w-full mb-6 rounded-lg shadow-sm" onerror="this.src='https://placehold.co/400x300?text=Fig+10'">
-                        <h4 class="font-bold text-sm mb-2">Passive Inclusion</h4>
-                        <p class="text-xs text-gray-500">Diversity statements are often passive encouragements rather than active support frameworks.</p>
-                    </div>
-                </div>
 
-                <!-- Finding 11, 12, 13: Technical & Gender Voids -->
-                <div class="space-y-8">
-                    <div class="finding-card p-12 bg-gray-900 text-white">
-                        <div class="grid lg:grid-cols-2 gap-12 items-center">
-                            <div class="space-y-6">
-                                <h3 class="text-3xl font-extrabold">1.7 The Gender and Skill Divide</h3>
-                                <p class="text-gray-400">
-                                    Our analysis reveals a stark "Gender Void" in AI supervision, dominated by male-only teams. Furthermore, there is a clear transition from disciplinary exclusion to <strong>implicit technical filtering</strong> based on programming fluency.
+                    <!-- Finding 11: Gender Void -->
+                    <div class="finding-card p-12 bg-gray-900 text-white relative overflow-hidden">
+                        <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h3 class="text-3xl font-black mb-6 leading-tight">The Visible "Gender Void"</h3>
+                                <p class="text-gray-400 mb-8 leading-relaxed">
+                                    Our analysis of 1,065 UK AI PhD ads confirms that supervisory leadership remains overwhelmingly male-dominated. This lack of visible role models significantly lowers <strong>AI self-efficacy</strong> for female candidates.
                                 </p>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="bg-white/10 p-4 rounded-xl border border-white/10">
-                                        <p class="text-2xl font-black text-uob-red">22.4%</p>
-                                        <p class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Require Python/Coding</p>
-                                    </div>
-                                    <div class="bg-white/10 p-4 rounded-xl border border-white/10">
-                                        <p class="text-2xl font-black text-blue-400">High</p>
-                                        <p class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Male Supervision Bias</p>
-                                    </div>
+                                <div class="inline-flex items-center space-x-3 p-4 bg-white/10 rounded-xl border border-white/10">
+                                    <i data-lucide="eye-off" class="w-6 h-6 text-red-400"></i>
+                                    <span class="text-xs font-bold">Indicator: 0% explicit mention of neurodiversity support.</span>
                                 </div>
                             </div>
-                            <div class="space-y-4">
-                                <img src="finding/Figure 11.png" class="rounded-xl shadow-2xl" onerror="this.src='https://placehold.co/600x300?text=Figure+11:+Gender+Void'">
-                                <img src="finding/Figure 12.png" class="rounded-xl shadow-2xl" onerror="this.src='https://placehold.co/600x300?text=Figure+12:+Tunnel+Vision'">
-                                <img src="finding/Figure 13.png" class="rounded-xl shadow-2xl" onerror="this.src='https://placehold.co/600x300?text=Figure+13:+Coding+Languages'">
+                            <div class="figure-box bg-white/5 p-4 rounded-3xl">
+                                <img src="finding/Figure 11.png" alt="Supervisor gender composition">
+                                <p class="mt-4 text-[10px] text-gray-500 italic">Figure 11: Inferred gender composition of visible supervisory teams.</p>
                             </div>
                         </div>
                     </div>
@@ -247,120 +285,190 @@
             </div>
         </section>
 
-        <!-- SECTION 2: QUANTITATIVE IMPACT (From Revised PDF) -->
-        <section id="literacy-impact">
-            <div class="flex items-center space-x-4 mb-12">
-                <div class="p-3 bg-uob-red rounded-xl text-white shadow-lg">
-                    <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+        <!-- SECTION 3: THE TECHNICAL GATE (Table 2 & 3 Integration) -->
+        <section id="section-3">
+            <div class="flex items-center space-x-4 mb-16">
+                <div class="p-3 bg-gray-100 rounded-xl text-gray-900 shadow-sm">
+                    <i data-lucide="binary" class="w-8 h-8"></i>
                 </div>
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 tracking-tight">2. Impact of AI Literacy Training</h2>
-                    <p class="text-gray-500 text-sm">Quantitative shifts in ability and attitudes following intervention.</p>
-                </div>
+                <h2 class="text-4xl font-bold tracking-tight">3. The Implicit Technical Gate</h2>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Finding 14: Attitudes -->
-                <div class="finding-card">
-                    <div class="figure-container">
-                        <img src="finding/Figure 14.png" alt="Attitudes towards AI" onerror="this.src='https://placehold.co/600x400?text=Figure+14:+Attitudes'">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold mb-4">2.1 Shifting Attitudes</h3>
-                        <p class="text-sm text-gray-600">
-                            The intervention led to a marked increase in students' confidence to hold informed conversations about AI, though career intentions remained more static.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Finding 15: Literacy Distribution -->
-                <div class="finding-card">
-                    <div class="figure-container">
-                        <img src="finding/Figure 15.png" alt="Distribution of literacy scores" onerror="this.src='https://placehold.co/600x400?text=Figure+15:+Literacy+Scores'">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold mb-4">2.2 Measurable Knowledge Gains</h3>
-                        <p class="text-sm text-gray-600">
-                            Mean raw literacy scores surged by <strong>16.2%</strong>, shifting from 52.3% to 68.5%. The IRT model confirmed a 0.5 SD shift in true ability.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Finding 16: Subject Area Gap -->
-                <div class="finding-card lg:col-span-2">
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div class="p-12">
-                            <h3 class="text-2xl font-bold mb-6">2.3 The Subject Area Catalyst</h3>
-                            <p class="text-gray-600 mb-6">
-                                While both groups benefited, the training acted as a stronger catalyst for STEM students (+21.7pp) compared to Non-STEM students (+11.4pp), highlighting the need for tailored support to close the literacy gap.
+            <div class="grid lg:grid-cols-2 gap-16 mb-24">
+                <div class="space-y-12">
+                    <div class="finding-card">
+                        <div class="figure-box">
+                            <img src="finding/Figure 12.png" alt="Tunnel Vision distribution">
+                        </div>
+                        <div class="p-10">
+                            <h3 class="text-xl font-bold mb-4">3.1 Disciplinary Tunnel Vision</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Explicit restrictions to "Computer Science only" degrees are rare. Most projects appear open on paper, yet they filter candidates through project descriptions.
                             </p>
-                            <div class="flex items-center space-x-4 text-sm font-bold">
-                                <span class="text-uob-red">STEM: 78.3% Post-test</span>
-                                <span class="text-gray-300">|</span>
-                                <span class="text-gray-600">Non-STEM: 60.0% Post-test</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm">
+                        <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 1: Technical Requirements Summary</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Requirement Type</th><th>Count</th><th>Percentage</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Programming language required</td><td>536</td><td>22.4%</td></tr>
+                                <tr><td>Technical degree required (Tunnel Vision)</td><td>96</td><td>4.0%</td></tr>
+                                <tr><td>CS skills/frameworks mentioned</td><td>535</td><td>22.3%</td></tr>
+                                <tr class="font-bold text-gray-900 bg-gray-50"><td>Any hard requirement (Prog OR Degree)</td><td>606</td><td>25.3%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="space-y-12">
+                    <div class="finding-card">
+                        <div class="figure-box">
+                            <img src="finding/Figure 13.png" alt="Programming languages">
+                        </div>
+                        <div class="p-10">
+                            <h3 class="text-xl font-bold mb-4">3.2 The Python Barrier</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Python is the undisputed gatekeeper. <strong>22.4%</strong> of listings explicitly mandate coding proficiency, signaling a shift from formal degrees to "assumed technical fluency."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm">
+                        <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 2: Disciplinary Framing Comparison</h4>
+                        <div class="overflow-x-auto">
+                            <table class="data-table">
+                                <thead>
+                                    <tr><th>Research Area</th><th>Total</th><th>Prog. Req</th><th>Any Hard Req.</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Applied AI</td><td>2066</td><td>24.1%</td><td>27.1%</td></tr>
+                                    <tr class="bg-red-50/50"><td>Core AI</td><td>52</td><td>28.8%</td><td>38.5%</td></tr>
+                                    <tr><td>Policy & Ethics</td><td>5</td><td>0.0%</td><td>0.0%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="mt-6 text-[10px] text-gray-400 italic">Core AI projects show the highest concentration of technical gatekeeping, while Policy & Ethics remains a niche, accessible sub-field.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: QUANTITATIVE IMPACT (Figure 14, 15, 16) -->
+        <section id="section-4">
+            <div class="bg-uob-red rounded-[3.5rem] p-12 md:p-20 text-white relative overflow-hidden shadow-3xl">
+                <div class="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
+                    <i data-lucide="brain-circuit" class="w-64 h-64"></i>
+                </div>
+
+                <div class="relative z-10 max-w-4xl">
+                    <h2 class="text-5xl font-black mb-12 tracking-tight">4. Quantifying the Impact of Literacy</h2>
+
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-8">
+                            <div>
+                                <div class="stat-highlight">+16.2%</div>
+                                <p class="text-lg font-bold text-red-100 mt-2 uppercase tracking-wide">Knowledge Acquisition</p>
+                                <p class="mt-4 text-red-100/70 leading-relaxed">
+                                    Mean raw AI literacy scores surged from <strong>52.3%</strong> to <strong>68.5%</strong>. Our IRT model confirmed a shift of <strong>0.5 Standard Deviations</strong> in underlying ability.
+                                </p>
+                            </div>
+
+                            <div class="bg-white/10 p-8 rounded-3xl border border-white/10">
+                                <h4 class="font-bold text-sm uppercase mb-4 tracking-widest text-red-200">Table 3: Scores by Subject Area</h4>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between items-center pb-2 border-b border-white/10">
+                                        <span>STEM Cohort Gain</span>
+                                        <span class="font-black text-xl">+21.7pp</span>
+                                    </div>
+                                    <div class="flex justify-between items-center pb-2 border-b border-white/10">
+                                        <span>Non-STEM Cohort Gain</span>
+                                        <span class="font-black text-xl text-red-300">+11.4pp</span>
+                                    </div>
+                                </div>
+                                <p class="mt-6 text-[10px] text-red-200/50 italic leading-relaxed underline">The training acted as a "catalyst" for STEM students, while Non-STEM students require more sustained, scaffolded support.</p>
                             </div>
                         </div>
-                        <div class="figure-container">
-                            <img src="finding/Figure 16.png" alt="Literacy by subject area" onerror="this.src='https://placehold.co/600x400?text=Figure+16:+Subject+Comparison'">
+
+                        <div class="space-y-8">
+                            <div class="bg-white/5 p-4 rounded-2xl">
+                                <img src="finding/Figure 15.png" alt="Literacy score distribution" class="rounded-xl">
+                                <p class="mt-4 text-[10px] text-red-100/50 text-center">Figure 15: Shift in the distribution of raw literacy scores (n=13).</p>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-2xl">
+                                <img src="finding/Figure 16.png" alt="Subject Area comparison" class="rounded-xl">
+                                <p class="mt-4 text-[10px] text-red-100/50 text-center">Figure 16: Individual literacy trajectories by academic background.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-20 pt-12 border-t border-white/10 grid md:grid-cols-2 gap-12">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold">2.1 Shifting Attitudes</h3>
+                            <p class="text-red-100/70 text-sm leading-relaxed">
+                                The diverging stacked bar chart (Fig 14) reveals a marked increase in confidence to discuss AI. However, statistical tests show that short technical interventions do not significantly alter career intentions.
+                            </p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl">
+                            <img src="finding/Figure 14.png" alt="Attitude shifts">
+                            <p class="mt-4 text-[10px] text-red-100/50 text-center">Figure 14: Pre- and post-training shifts in student attitudes.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: QUALITATIVE INSIGHTS (From Qualitative PDF) -->
-        <section id="qualitative-themes">
-            <div class="flex items-center space-x-4 mb-12">
-                <div class="p-3 bg-blue-600 rounded-xl text-white shadow-lg">
-                    <i data-lucide="quote" class="w-8 h-8"></i>
+        <!-- SECTION 5: QUALITATIVE VOICES -->
+        <section id="section-5">
+            <div class="flex items-center space-x-4 mb-16">
+                <div class="p-3 bg-blue-50 rounded-xl text-blue-600 shadow-sm">
+                    <i data-lucide="message-circle" class="w-8 h-8"></i>
                 </div>
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 tracking-tight">3. Qualitative Dimensions</h2>
-                    <p class="text-gray-500 text-sm">Themes extracted from participant interviews and feedback.</p>
-                </div>
+                <h2 class="text-4xl font-bold tracking-tight">5. Qualitative Dimensions</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-blue-50/50 p-10 rounded-[3rem] border border-blue-100 relative overflow-hidden">
-                    <i data-lucide="terminal" class="absolute -right-8 -bottom-8 w-32 h-32 text-blue-100 opacity-50"></i>
-                    <h4 class="text-blue-900 font-extrabold uppercase tracking-widest text-[10px] mb-6">Technical Gatekeeping</h4>
-                    <p class="text-xl text-blue-950 font-medium italic leading-relaxed mb-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-blue-50 p-12 rounded-[3rem] border border-blue-100 relative group">
+                    <i data-lucide="quote" class="w-12 h-12 text-blue-200 mb-8"></i>
+                    <p class="text-2xl text-blue-900 font-medium italic leading-relaxed mb-8">
                         "I never got any chance to study Python... it seems so complicated to a person from a social science major."
                     </p>
-                    <p class="text-sm text-blue-800 leading-relaxed">
-                        Educational pathways in high school act as long-term filters, creating a perceived mathematical barrier that discourages entry into AI PhD programs.
-                    </p>
+                    <div class="pt-8 border-t border-blue-200">
+                        <h5 class="text-xs font-black text-blue-800 uppercase tracking-widest">Theme: Technical Gatekeeping</h5>
+                        <p class="mt-2 text-sm text-blue-700/70">Educational pathways in high school act as long-term filters, creating perceived "mathematical barriers."</p>
+                    </div>
                 </div>
 
-                <div class="bg-red-50/50 p-10 rounded-[3rem] border border-red-100 relative overflow-hidden">
-                    <i data-lucide="briefcase" class="absolute -right-8 -bottom-8 w-32 h-32 text-red-100 opacity-50"></i>
-                    <h4 class="text-uob-red font-extrabold uppercase tracking-widest text-[10px] mb-6">Career Expectations</h4>
-                    <p class="text-xl text-red-950 font-medium italic leading-relaxed mb-8">
+                <div class="bg-gray-100 p-12 rounded-[3rem] border border-gray-200 relative group">
+                    <i data-lucide="quote" class="w-12 h-12 text-gray-300 mb-8"></i>
+                    <p class="text-2xl text-gray-800 font-medium italic leading-relaxed mb-8">
                         "I chose my degree because it's broad... you always need a mechanical engineer. For AI, job opportunities seem limited."
                     </p>
-                    <p class="text-sm text-red-800 leading-relaxed">
-                        Ambiguity about non-technical career paths and fear of market competitiveness for migrants remain major psychological barriers.
-                    </p>
+                    <div class="pt-8 border-t border-gray-300">
+                        <h5 class="text-xs font-black text-gray-600 uppercase tracking-widest">Theme: Career Expectations</h5>
+                        <p class="mt-2 text-sm text-gray-500">Ambiguity about career paths and market competitiveness for migrants remains a major psychological barrier.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA -->
-        <section class="text-center bg-gray-900 py-20 rounded-[3.5rem] relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 pointer-events-none">
-                <i data-lucide="folder-search" class="w-64 h-64 -bottom-20 -right-20 absolute"></i>
-            </div>
-            <h3 class="text-3xl font-bold text-white mb-6 relative z-10">Explore the Full Data</h3>
-            <p class="text-gray-400 mb-10 max-w-xl mx-auto relative z-10 text-lg">
-                For a complete technical breakdown of the NLP pipeline and IRT modeling, please visit our resources hub.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-                <a href="resources.html" class="inline-flex items-center px-10 py-5 bg-uob-red text-white rounded-full font-bold hover:bg-red-700 transition shadow-xl">
-                    Resources Hub <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
-                </a>
-                <a href="team.html#contact" class="inline-flex items-center px-10 py-5 bg-white/5 text-white border border-white/10 rounded-full font-bold hover:bg-white/10 transition">
-                    Contact Team
-                </a>
+        <!-- FINAL CTA -->
+        <section class="text-center py-20 bg-gray-900 rounded-[4rem] text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <div class="relative z-10 max-w-2xl mx-auto px-6">
+                <h2 class="text-4xl font-black mb-6">Access the Full Methodology</h2>
+                <p class="text-gray-400 mb-12">Download our full project report including the IRT modeling technical breakdown and the Python NLP pipeline code.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="resources.html" class="px-8 py-4 bg-uob-red rounded-full font-bold hover:bg-red-700 transition shadow-xl inline-flex items-center">
+                        Resources Hub <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    <a href="team.html#contact" class="px-8 py-4 bg-white/5 border border-white/10 rounded-full font-bold hover:bg-white/10 transition inline-flex items-center">
+                        Contact Team
+                    </a>
+                </div>
             </div>
         </section>
 
