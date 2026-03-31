@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantitative Results | AI Barriers Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        :root { --uob-red: #B01C2E; --uob-dark: #8a1624; }
+        .text-uob-red { color: var(--uob-red); }
+        .bg-uob-red { background-color: var(--uob-red); }
+        .border-uob-red { border-color: var(--uob-red); }
+        .glass-nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+
+        .finding-card { background: white; border: 1px solid #F3F4F6; border-radius: 2.5rem; overflow: hidden; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .finding-card:hover { transform: translateY(-5px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08); border-color: #E5E7EB; }
+
+        .figure-box { background: #F9FAFB; padding: 2.5rem; display: flex; flex-direction: column; align-items: center; position: relative; }
+        .figure-box img, .zoomable-img { max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); cursor: pointer; transition: opacity 0.2s ease; }
+        .figure-box img:active, .zoomable-img:active { opacity: 0.85; }
+        .click-hint { display: block; margin-top: 0.5rem; font-size: 0.65rem; color: #9CA3AF; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+
+        #img-zoom-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.72); backdrop-filter: blur(6px); align-items: center; justify-content: center; animation: overlayFadeIn 0.22s ease; }
+        #img-zoom-overlay.active { display: flex; }
+        @keyframes overlayFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        #img-zoom-overlay img { max-width: 60vw; max-height: 60vh; border-radius: 1.25rem; box-shadow: 0 30px 80px rgba(0,0,0,0.5); animation: zoomIn 0.25s cubic-bezier(0.34,1.56,0.64,1); object-fit: contain; }
+        @keyframes zoomIn { from { transform: scale(0.75); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        #img-zoom-overlay .close-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 0.08em; }
+
+        .section-label { font-size: 0.7rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--uob-red); }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+        .data-table th { background: #F3F4F6; text-align: left; padding: 1rem; font-weight: 700; color: #374151; border-bottom: 2px solid #E5E7EB; }
+        .data-table td { padding: 1rem; border-bottom: 1px solid #F3F4F6; color: #4B5563; }
+        .data-table tr:hover { background: #F9FAFB; }
+        .quote-card { position: relative; padding: 2rem 2.5rem; border-radius: 1.5rem; border-left: 4px solid var(--uob-red); background: #FFF9F9; font-style: italic; color: #374151; }
+        .quote-card::before { content: '\201C'; font-size: 4rem; color: #FECACA; position: absolute; top: -0.5rem; left: 1.25rem; line-height: 1; font-family: Georgia, serif; }
+        .theme-tag { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+
+        .sidebar-active { border-left: 3px solid var(--uob-red) !important; color: var(--uob-red) !important; padding-left: 1rem !important; font-weight: 700; background: linear-gradient(90deg, #fff5f5 0%, rgba(255,255,255,0) 100%); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+<div id="img-zoom-overlay">
+    <img id="zoom-img" src="" alt="">
+    <span class="close-hint">Click anywhere to close</span>
+</div>
+
+<!-- Navigation -->
+<nav class="fixed w-full glass-nav z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-uob-red rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">AI</div>
+                <span class="font-bold text-xl tracking-tight hidden sm:block">AI Barriers Project</span>
+            </a>
+        </div>
+        <div class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-600">
+            <a href="index.html" class="hover:text-uob-red transition">Home</a>
+            <a href="literature.html" class="hover:text-uob-red transition">Literature Review</a>
+            <a href="methodology.html" class="hover:text-uob-red transition">Methodology</a>
+            <a href="findings.html" class="text-uob-red border-b-2 border-uob-red pb-1">Findings</a>
+            <a href="resources.html" class="hover:text-uob-red transition">Resources Hub</a>
+            <a href="team.html" class="hover:text-uob-red transition">Team</a>
+        </div>
+        <a href="team.html#contact" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">Contact Us</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="pt-40 pb-16 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 text-center lg:text-left">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-[10px] font-bold uppercase tracking-widest mb-8">
+            <i data-lucide="brain-circuit" class="w-3 h-3"></i>
+            <span>Statistical Analysis</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-none tracking-tighter">
+            Numbers &amp; <span class="text-uob-red">Evidence</span>
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed max-w-3xl border-l-4 border-uob-red pl-8 mb-10">
+            Paired pre- and post-training survey analysis (n=13) using raw percentage scoring and IRT ability estimates to evaluate the impact of the JGI AI training programme.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-4">
+            <a href="findings.html" class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-bold border-2 border-gray-200 text-gray-600 hover:border-uob-red hover:text-uob-red transition">
+                <i data-lucide="bar-chart-2" class="inline w-4 h-4 mr-1.5"></i> Market Findings
+            </a>
+            <a href="findings-qualitative.html" class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-bold border-2 border-gray-200 text-gray-600 hover:border-uob-red hover:text-uob-red transition">
+                <i data-lucide="message-circle" class="inline w-4 h-4 mr-1.5"></i> Qualitative Results
+            </a>
+            <a href="findings-quantitative.html" class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-bold bg-uob-red text-white shadow-md">
+                <i data-lucide="brain-circuit" class="inline w-4 h-4 mr-1.5"></i> Quantitative Results
+            </a>
+            <a href="findings-conclusion.html" class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-bold border-2 border-gray-200 text-gray-600 hover:border-uob-red hover:text-uob-red transition">
+                <i data-lucide="flag" class="inline w-4 h-4 mr-1.5"></i> Conclusion
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Layout: Sidebar + Content -->
+<div class="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row gap-16">
+
+    <!-- Left Sidebar -->
+    <aside class="hidden lg:block lg:w-1/4">
+        <div class="sticky top-28 pr-4 border-r border-gray-100 max-h-[calc(100vh-8rem)] overflow-y-auto no-scrollbar">
+            <nav class="space-y-1">
+                <h3 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4 pl-2">Findings — Quantitative</h3>
+                <a href="#overview-quant" class="sidebar-link block text-sm font-medium text-gray-600 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">Overview</a>
+                <a href="#h1" class="sidebar-link block text-sm font-medium text-gray-600 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">H1 — Training &amp; Interest</a>
+                <a href="#h2" class="sidebar-link block text-sm font-medium text-gray-600 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">H2 — AI Literacy</a>
+                <a href="#h3" class="sidebar-link block text-sm font-medium text-gray-600 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">H3 — Socioeconomic Status</a>
+                <a href="#h4" class="sidebar-link block text-sm font-medium text-gray-600 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">H4 — STEM vs Non-STEM</a>
+
+                <div class="pt-6 border-t border-gray-100 mt-4">
+                    <h3 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3 pl-2">Other Sections</h3>
+                    <a href="findings.html" class="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">
+                        <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 flex-shrink-0"></i> Market Findings
+                    </a>
+                    <a href="findings-qualitative.html" class="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5 flex-shrink-0"></i> Qualitative Results
+                    </a>
+                    <a href="findings-conclusion.html" class="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-uob-red py-2 pl-2 border-l-2 border-transparent transition-all">
+                        <i data-lucide="flag" class="w-3.5 h-3.5 flex-shrink-0"></i> Conclusion
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="lg:w-3/4 space-y-20 pb-24">
+
+        <!-- Overview -->
+        <section id="overview-quant" class="scroll-mt-32">
+            <div class="bg-uob-red rounded-[3rem] p-12 md:p-16 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-10 opacity-10 pointer-events-none">
+                    <i data-lucide="brain-circuit" class="w-56 h-56"></i>
+                </div>
+                <div class="relative z-10 max-w-3xl">
+                    <p class="section-label text-red-200 mb-3">Overview</p>
+                    <h2 class="text-4xl font-black mb-6 tracking-tight">Quantitative Findings</h2>
+                    <p class="text-red-100/80 leading-relaxed mb-6">
+                        Before conducting paired analyses, the initial dataset of 14 matched pre- and post-training surveys was cleaned to ensure data integrity. One participant was excluded for completing both surveys consecutively (two minutes apart). For a participant with multiple post-survey submissions, only the first complete submission was retained. This resulted in a <strong>final matched sample of n=13</strong>.
+                    </p>
+                    <p class="text-red-100/70 text-sm leading-relaxed">Two complementary scoring methods were applied to the 10-item AI-LITS test: (1) Raw Percentage — total correct answers out of 10; (2) IRT Ability Score (θ) — a 3-Parameter Logistic model using validated fixed item parameters from Hornberger et al. (2025), weighting questions by difficulty, discrimination, and adjusting for guessing probability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- H1 -->
+        <section id="h1" class="scroll-mt-32">
+            <div class="flex items-center space-x-3 mb-10">
+                <span class="bg-red-100 text-uob-red text-xs font-black px-4 py-1.5 rounded-full tracking-widest uppercase">H1</span>
+                <h2 class="text-3xl font-bold tracking-tight">AI Training &amp; Interest in AI Study</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10">
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="quantitative%20results/Figure%201.png" alt="Attitude shifts pre and post training" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 7: Pre- and post-training shifts in AI attitudes (n=13). Diverging stacked bar chart.</p>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-xl font-bold mb-4">Shifting Attitudes: PhD Confidence</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            When asked to rate agreement with <em>"I think I would be offered a place to study a PhD in AI if I applied"</em> (1–5 scale), the median score remained static at <strong>2.0 (Disagree)</strong> before and after training. The mean shifted from 2.15 to 2.54 — a weak trend approaching but not reaching statistical significance (W = 18.0, p = 0.094).
+                        </p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            For direct willingness to apply for an AI PhD (0=No, 1=Maybe, 2=Yes), the median remained at 1.0 (Maybe). Mean rose slightly from 0.77 to 0.92, not statistically significant (W = 10.0, p = 0.375).
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Key Interpretation</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            The diverging stacked bar chart reveals a marked increase in confidence to discuss AI, alongside positive directional trends in perceived PhD eligibility. However, a short technical intervention alone is insufficient to significantly alter deeply held career intentions or overcome confidence barriers regarding PhD admissions.
+                        </p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 rounded-2xl p-6">
+                        <p class="text-sm font-bold text-red-700 mb-2">Key finding (H1)</p>
+                        <p class="text-sm text-red-600 leading-relaxed">While training successfully increased objective AI literacy (H2), the short technical intervention alone is insufficient to significantly alter deeply held career intentions or confidence barriers regarding PhD admissions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- H2 -->
+        <section id="h2" class="scroll-mt-32">
+            <div class="flex items-center space-x-3 mb-10">
+                <span class="bg-green-100 text-green-800 text-xs font-black px-4 py-1.5 rounded-full tracking-widest uppercase">H2</span>
+                <h2 class="text-3xl font-bold tracking-tight">Does Training Increase AI Literacy?</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 mb-10">
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="quantitative%20results/Figure%202.png" alt="Raw AI literacy scores" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 8: Raw AI literacy questionnaire scores before and after training (n=13). Histogram illustrating a significant 16.2% increase in mean score.</p>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-xl font-bold mb-4">Raw Score Improvement</h3>
+                        <div class="flex items-end space-x-4 mb-6">
+                            <div class="text-center">
+                                <p class="text-4xl font-black text-gray-400">52.3%</p>
+                                <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">Pre-Training</p>
+                            </div>
+                            <div class="text-uob-red font-black text-2xl mb-1">→</div>
+                            <div class="text-center">
+                                <p class="text-4xl font-black text-uob-red">68.5%</p>
+                                <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">Post-Training</p>
+                            </div>
+                            <div class="ml-2">
+                                <p class="text-3xl font-black text-green-600">+16.2pp</p>
+                                <p class="text-xs text-green-600 font-semibold">p = 0.024 ✓</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed">A paired-samples t-test confirmed the raw improvement was statistically significant (p = 0.024), confirming the training successfully imparted measurable knowledge of core AI concepts.</p>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="quantitative%20results/Figure%203.png" alt="IRT ability scores" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 9: IRT ability scores from the AI literacy questionnaire. Mean ability shifted from 0.09 to 0.59 — nearly half a standard deviation.</p>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-xl font-bold mb-4">IRT Model: True Ability Shift</h3>
+                        <div class="flex items-end space-x-4 mb-6">
+                            <div class="text-center">
+                                <p class="text-4xl font-black text-gray-400">0.094</p>
+                                <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">θ Pre-Training</p>
+                            </div>
+                            <div class="text-uob-red font-black text-2xl mb-1">→</div>
+                            <div class="text-center">
+                                <p class="text-4xl font-black text-uob-red">0.586</p>
+                                <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">θ Post-Training</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed">The mean true ability estimate increased substantially — nearly half a standard deviation (≈0.5 SD). The 3PL IRT model introduces higher variance than raw scoring, rendering the analysis statistically underpowered at n=13. Nevertheless, strong directional alignment between both measures supports overall intervention efficacy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="finding/Figure%2015.png" alt="Literacy score distribution" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 15: Shift in distribution of raw literacy scores (n=13).</p>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold mb-2">Score Distribution Shift</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Visualises the rightward shift in the distribution of raw percentage scores, reflecting the population-level improvement in AI literacy following the training intervention.</p>
+                    </div>
+                </div>
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="finding/Figure%2014.png" alt="Attitude shifts" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 14: Pre- and post-training shifts in student attitudes.</p>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold mb-2">Attitude Changes</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Reveals marked increase in confidence to discuss AI, alongside positive directional trends in perceived PhD eligibility and representation — though these do not reach statistical significance in most measures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- H3 -->
+        <section id="h3" class="scroll-mt-32">
+            <div class="flex items-center space-x-3 mb-10">
+                <span class="bg-amber-100 text-amber-800 text-xs font-black px-4 py-1.5 rounded-full tracking-widest uppercase">H3</span>
+                <h2 class="text-3xl font-bold tracking-tight">Socio-economic Status &amp; AI Study Interest</h2>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-3xl p-10">
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-amber-900">Severe Demographic Skew</h3>
+                        <p class="text-amber-800 leading-relaxed mb-6">
+                            The self-selecting nature of training attendees revealed a severe demographic imbalance: <strong>12 of the 13 matched participants</strong> fell into the Higher SES category, leaving only <strong>1 participant</strong> in the Lower SES category. Due to this extreme imbalance, formal comparative hypothesis testing is impossible.
+                        </p>
+                        <p class="text-amber-700 text-sm leading-relaxed mb-6">
+                            Whilst statistical conclusions cannot be drawn from a sample size of one, the fact that only a single first-generation student completed the AI training pipeline highlights a critical systemic issue regarding accessibility and early-stage engagement in AI education.
+                        </p>
+                        <div class="bg-white border border-amber-200 rounded-xl p-5">
+                            <p class="text-sm font-bold text-amber-800 mb-2">Lesson Learned</p>
+                            <p class="text-sm text-amber-700 leading-relaxed">Future research should employ a purposive sampling strategy to actively recruit students from diverse socio-economic backgrounds. Engagement with AI training opportunities may already be unequal at the point of access.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 border border-amber-100">
+                        <h4 class="font-bold text-gray-700 mb-6 text-sm uppercase tracking-widest">Sample Composition (n=13)</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-600">Higher SES</span>
+                                    <span class="font-bold text-gray-800">12 (92.3%)</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-3">
+                                    <div class="bg-gray-700 h-3 rounded-full" style="width:92.3%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-600">Lower SES</span>
+                                    <span class="font-bold text-uob-red">1 (7.7%)</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-3">
+                                    <div class="bg-uob-red h-3 rounded-full" style="width:7.7%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-xs text-gray-400 italic">Hypothesis testing not possible due to insufficient lower SES representation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- H4 -->
+        <section id="h4" class="scroll-mt-32">
+            <div class="flex items-center space-x-3 mb-10">
+                <span class="bg-blue-100 text-blue-800 text-xs font-black px-4 py-1.5 rounded-full tracking-widest uppercase">H4</span>
+                <h2 class="text-3xl font-bold tracking-tight">STEM vs. Non-STEM AI Literacy</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 mb-10">
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="quantitative%20results/Figure%204.png" alt="Slope chart by subject area" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 10: Individual and group shifts in AI literacy by subject area. Slope chart comparing pre- and post-training scores for Non-STEM (n=7, left) and STEM (n=6, right) students.</p>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-xl font-bold mb-4">The Diverging Trajectories</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Prior to training, STEM students exhibited a higher baseline: mean raw score of <strong>56.7%</strong> (θ = 0.251) vs. Non-STEM's <strong>48.6%</strong> (θ = -0.041). Whilst both groups benefitted from the intervention, STEM students experienced substantially higher growth.
+                        </p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            The training appears to act as a stronger catalyst for students already embedded in STEM disciplines, effectively <strong>widening the literacy gap</strong> rather than closing it — suggesting AI training may inadvertently reinforce existing inequalities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm">
+                        <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 4: Pre- &amp; Post-Training Scores by Subject Area</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Group</th><th>n</th><th>Mean Pre</th><th>Mean Post</th><th>Change</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-blue-50/50"><td><strong>STEM</strong></td><td>6</td><td>56.7%</td><td>78.3%</td><td class="font-bold text-green-700">+21.7pp</td></tr>
+                                <tr><td>Non-STEM</td><td>7</td><td>48.6%</td><td>60.0%</td><td class="font-bold text-green-600">+11.4pp</td></tr>
+                                <tr class="font-bold bg-gray-50"><td>All</td><td>13</td><td>52.3%</td><td>68.5%</td><td class="text-green-700">+16.2pp</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="mt-4 text-xs text-gray-400 italic leading-relaxed">Due to small sub-sample sizes, within-group paired t-tests did not reach statistical significance. Descriptive data nonetheless clearly indicates a wider literacy gap post-training.</p>
+                    </div>
+
+                    <div class="finding-card">
+                        <div class="figure-box">
+                            <img src="finding/Figure%2016.png" alt="Subject Area comparison" class="zoomable-img">
+                            <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 16: Individual literacy trajectories by academic background.</p>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="font-bold mb-2">Individual Trajectories</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Individual trajectories confirm that the STEM cohort's scores surged by +21.7pp to 78.3% (θ increase of +0.816), whilst Non-STEM saw a more modest +11.4pp, finishing at 60.0% (θ increase of +0.215).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Qualitative corroboration -->
+            <div class="bg-gray-900 rounded-3xl p-10 text-white">
+                <h3 class="text-xl font-bold mb-6">Qualitative Corroboration of H4</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="quote-card bg-white/5 border-l-4 border-red-400 text-gray-300">
+                        <p class="pl-4 mt-3 text-sm leading-relaxed">"I come from an engineering background, so I've done some Python, and I know like some coding. If I read some code, I would probably understand what it's doing."</p>
+                        <span class="theme-tag bg-blue-900 text-blue-200 mt-4 inline-block">STEM Advantage</span>
+                    </div>
+                    <div class="quote-card bg-white/5 border-l-4 border-gray-500 text-gray-300">
+                        <p class="pl-4 mt-3 text-sm leading-relaxed">"Maybe it's because of like I don't have that technical background of it. So like I got the base of it, but still like I'm not — probably I won't go for an AI postgrad."</p>
+                        <span class="theme-tag bg-gray-700 text-gray-300 mt-4 inline-block">Non-STEM Challenge</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="bg-white py-12 px-6 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 font-medium uppercase tracking-wider">
+        <p>&copy; 2026 UNIVERSITY OF BRISTOL. EPSRC FUNDED.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0 uppercase font-bold">
+            <a href="index.html" class="hover:text-red-600 transition tracking-tighter text-gray-600">Home</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+    const overlay = document.getElementById('img-zoom-overlay');
+    const zoomImg = document.getElementById('zoom-img');
+    function showZoom(src, alt) { zoomImg.src = src; zoomImg.alt = alt || ''; overlay.classList.add('active'); }
+    function hideZoom() { overlay.classList.remove('active'); zoomImg.src = ''; }
+    function attachZoom() {
+        document.querySelectorAll('.zoomable-img, .figure-box img').forEach(img => {
+            if (img.dataset.zoomAttached) return;
+            img.dataset.zoomAttached = 'true';
+            img.addEventListener('click', () => showZoom(img.src, img.alt));
+            if (!img.nextElementSibling || !img.nextElementSibling.classList.contains('click-hint')) {
+                const hint = document.createElement('span');
+                hint.className = 'click-hint';
+                hint.textContent = '↗ Click to enlarge';
+                img.parentNode.insertBefore(hint, img.nextSibling);
+            }
+        });
+    }
+    overlay.addEventListener('click', hideZoom);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideZoom(); });
+    attachZoom();
+
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(s => { if (pageYOffset >= s.offsetTop - 200) current = s.id; });
+        sidebarLinks.forEach(link => {
+            link.classList.remove('sidebar-active');
+            if (link.getAttribute('href') === '#' + current) link.classList.add('sidebar-active');
+        });
+    });
+</script>
+</body>
+</html>
