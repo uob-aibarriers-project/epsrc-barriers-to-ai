@@ -159,7 +159,7 @@
                 <h2 class="text-3xl font-bold tracking-tight">AI Training &amp; Interest in AI Study</h2>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-10">
+            <div class="space-y-10">
                 <div class="finding-card">
                     <div class="figure-box">
                         <img src="quantitative%20results/Figure%201.png" alt="Attitude shifts pre and post training" class="zoomable-img">
@@ -168,10 +168,10 @@
                     <div class="p-10">
                         <h3 class="text-xl font-bold mb-4">Shifting Attitudes: PhD Confidence</h3>
                         <p class="text-gray-600 leading-relaxed mb-4">
-                            When asked to rate agreement with <em>"I think I would be offered a place to study a PhD in AI if I applied"</em> (1–5 scale), the median score remained static at <strong>2.0 (Disagree)</strong> before and after training. The mean shifted from 2.15 to 2.54 — a weak trend approaching but not reaching statistical significance (W = 18.0, p = 0.094).
+                            When asked to rate their agreement with the statement, <em>"I think I would be offered a place to study a PhD in AI if I applied"</em> (1 = Strongly Disagree to 5 = Strongly Agree), the median score remained static at <strong>2.0 (Disagree)</strong> before and after training. The mean score shifted positively from 2.15 to 2.54, which a Wilcoxon test indicated is a weak trend approaching, but not reaching, statistical significance (W = 18.0, p = 0.094).
                         </p>
                         <p class="text-gray-500 text-sm leading-relaxed">
-                            For direct willingness to apply for an AI PhD (0=No, 1=Maybe, 2=Yes), the median remained at 1.0 (Maybe). Mean rose slightly from 0.77 to 0.92, not statistically significant (W = 10.0, p = 0.375).
+                            A similar pattern emerged regarding the direct question, <em>"Would you consider applying for a PhD in AI?"</em> (0 = No, 1 = Maybe, 2 = Yes). The median response remained firmly at 1.0 (Maybe). Whilst the mean score rose slightly from 0.77 to 0.92, this change was not statistically significant (W = 10.0, p = 0.375).
                         </p>
                     </div>
                 </div>
@@ -179,12 +179,12 @@
                     <div>
                         <h3 class="text-xl font-bold mb-4">Key Interpretation</h3>
                         <p class="text-gray-600 leading-relaxed mb-6">
-                            The diverging stacked bar chart reveals a marked increase in confidence to discuss AI, alongside positive directional trends in perceived PhD eligibility. However, a short technical intervention alone is insufficient to significantly alter deeply held career intentions or overcome confidence barriers regarding PhD admissions.
+                            Collectively, the quantitative data suggests that whilst the training successfully increased objective AI literacy (as seen in H2), a short technical intervention alone is insufficient to significantly alter deeply held career intentions or overcome confidence barriers regarding PhD admissions.
                         </p>
                     </div>
                     <div class="bg-red-50 border border-red-100 rounded-2xl p-6">
-                        <p class="text-sm font-bold text-red-700 mb-2">Key finding (H1)</p>
-                        <p class="text-sm text-red-600 leading-relaxed">While training successfully increased objective AI literacy (H2), the short technical intervention alone is insufficient to significantly alter deeply held career intentions or confidence barriers regarding PhD admissions.</p>
+                        <p class="text-sm font-bold text-red-700 mb-2">Key Finding (H1)</p>
+                        <p class="text-sm text-red-600 leading-relaxed">Whilst training successfully increased objective AI literacy (H2), the short technical intervention alone is insufficient to significantly alter deeply held career intentions or confidence barriers regarding PhD admissions.</p>
                     </div>
                 </div>
             </div>
@@ -197,7 +197,7 @@
                 <h2 class="text-3xl font-bold tracking-tight">Does Training Increase AI Literacy?</h2>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-10 mb-10">
+            <div class="space-y-10 mb-10">
                 <div class="finding-card">
                     <div class="figure-box">
                         <img src="quantitative%20results/Figure%202.png" alt="Raw AI literacy scores" class="zoomable-img">
@@ -205,19 +205,19 @@
                     </div>
                     <div class="p-10">
                         <h3 class="text-xl font-bold mb-4">Raw Score Improvement</h3>
-                        <div class="flex items-end space-x-4 mb-6">
+                        <div class="flex items-center justify-center space-x-6 mb-6">
                             <div class="text-center">
                                 <p class="text-4xl font-black text-gray-400">52.3%</p>
                                 <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">Pre-Training</p>
                             </div>
-                            <div class="text-uob-red font-black text-2xl mb-1">→</div>
+                            <div class="text-uob-red font-black text-2xl">→</div>
                             <div class="text-center">
                                 <p class="text-4xl font-black text-uob-red">68.5%</p>
                                 <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">Post-Training</p>
                             </div>
-                            <div class="ml-2">
+                            <div class="text-center">
                                 <p class="text-3xl font-black text-green-600">+16.2pp</p>
-                                <p class="text-xs text-green-600 font-semibold">p = 0.024 ✓</p>
+                                <p class="text-xs text-green-600 font-semibold text-center">p = 0.024 ✓</p>
                             </div>
                         </div>
                         <p class="text-gray-500 text-sm leading-relaxed">A paired-samples t-test confirmed the raw improvement was statistically significant (p = 0.024), confirming the training successfully imparted measurable knowledge of core AI concepts.</p>
@@ -231,12 +231,12 @@
                     </div>
                     <div class="p-10">
                         <h3 class="text-xl font-bold mb-4">IRT Model: True Ability Shift</h3>
-                        <div class="flex items-end space-x-4 mb-6">
+                        <div class="flex items-center justify-center space-x-6 mb-6">
                             <div class="text-center">
                                 <p class="text-4xl font-black text-gray-400">0.094</p>
                                 <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">θ Pre-Training</p>
                             </div>
-                            <div class="text-uob-red font-black text-2xl mb-1">→</div>
+                            <div class="text-uob-red font-black text-2xl">→</div>
                             <div class="text-center">
                                 <p class="text-4xl font-black text-uob-red">0.586</p>
                                 <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">θ Post-Training</p>
@@ -250,22 +250,22 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="finding-card">
                     <div class="figure-box">
-                        <img src="finding/Figure%2015.png" alt="Literacy score distribution" class="zoomable-img">
-                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 15: Shift in distribution of raw literacy scores (n=13).</p>
+                        <img src="quantitative%20results/Figure%206.png" alt="Motivating factors for PhD" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 12: Motivating factors for undertaking a PhD, comparing pre- and post-survey responses.</p>
                     </div>
                     <div class="p-8">
-                        <h4 class="font-bold mb-2">Score Distribution Shift</h4>
-                        <p class="text-sm text-gray-500 leading-relaxed">Visualises the rightward shift in the distribution of raw percentage scores, reflecting the population-level improvement in AI literacy following the training intervention.</p>
+                        <h4 class="font-bold mb-2">Motivations for PhD Study</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Post-training, career prospects (42%) and personal interests (71%) emerged as the dominant motivating factors for pursuing a PhD, whilst pursuit of knowledge remained consistently high at 71% across both surveys.</p>
                     </div>
                 </div>
                 <div class="finding-card">
                     <div class="figure-box">
-                        <img src="finding/Figure%2014.png" alt="Attitude shifts" class="zoomable-img">
-                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 14: Pre- and post-training shifts in student attitudes.</p>
+                        <img src="quantitative%20results/Figure%207.png" alt="Motivating factors for training" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 13: Motivating factors and experience of attending the training, comparing pre- and post-survey responses.</p>
                     </div>
                     <div class="p-8">
-                        <h4 class="font-bold mb-2">Attitude Changes</h4>
-                        <p class="text-sm text-gray-500 leading-relaxed">Reveals marked increase in confidence to discuss AI, alongside positive directional trends in perceived PhD eligibility and representation — though these do not reach statistical significance in most measures.</p>
+                        <h4 class="font-bold mb-2">Training Experience &amp; Motivations</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Post-training, self-efficacy (63%) and capacity building (63%) rose substantially as reported motivations, whilst career prospects dropped to 0% — reflecting a shift towards intrinsic learning motivations following participation.</p>
                     </div>
                 </div>
             </div>
@@ -280,42 +280,44 @@
 
             <div class="bg-amber-50 border border-amber-200 rounded-3xl p-10">
                 <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-2xl p-8 border border-amber-100">
+                            <h4 class="font-bold text-gray-700 mb-6 text-sm uppercase tracking-widest">Sample Composition (n=13)</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-600">Higher SES</span>
+                                        <span class="font-bold text-gray-800">12 (92.3%)</span>
+                                    </div>
+                                    <div class="w-full bg-gray-100 rounded-full h-3">
+                                        <div class="bg-gray-700 h-3 rounded-full" style="width:92.3%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-600">Lower SES</span>
+                                        <span class="font-bold text-uob-red">1 (7.7%)</span>
+                                    </div>
+                                    <div class="w-full bg-gray-100 rounded-full h-3">
+                                        <div class="bg-uob-red h-3 rounded-full" style="width:7.7%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-6 text-xs text-gray-400 italic">Hypothesis testing not possible due to insufficient lower SES representation.</p>
+                        </div>
+                        <div class="bg-white border border-amber-200 rounded-xl p-5">
+                            <p class="text-sm font-bold text-amber-800 mb-2">Lesson Learned</p>
+                            <p class="text-sm text-amber-700 leading-relaxed">Future research should employ a purposive sampling strategy to actively recruit students from diverse socio-economic backgrounds. As a key lesson learned, engagement with AI training opportunities may already be unequal at the point of access.</p>
+                        </div>
+                    </div>
                     <div>
                         <h3 class="text-xl font-bold mb-4 text-amber-900">Severe Demographic Skew</h3>
                         <p class="text-amber-800 leading-relaxed mb-6">
-                            The self-selecting nature of training attendees revealed a severe demographic imbalance: <strong>12 of the 13 matched participants</strong> fell into the Higher SES category, leaving only <strong>1 participant</strong> in the Lower SES category. Due to this extreme imbalance, formal comparative hypothesis testing is impossible.
+                            The self-selecting nature of the training attendees revealed a severe demographic skew: <strong>12 of the 13 matched participants</strong> fell into the Higher SES category, leaving only <strong>1 participant</strong> in the Lower SES category. Due to this extreme imbalance, formal comparative hypothesis testing is impossible.
                         </p>
-                        <p class="text-amber-700 text-sm leading-relaxed mb-6">
-                            Whilst statistical conclusions cannot be drawn from a sample size of one, the fact that only a single first-generation student completed the AI training pipeline highlights a critical systemic issue regarding accessibility and early-stage engagement in AI education.
+                        <p class="text-amber-700 text-sm leading-relaxed">
+                            Whilst statistical conclusions cannot be drawn from a sample size of one, the fact that only a single first-generation student completed the AI training pipeline highlights a critical systemic issue regarding accessibility and early-stage engagement in AI education. Future research should employ a purposive sampling strategy to actively recruit students from diverse socio-economic backgrounds, which would yield much stronger and more robust findings on this front.
                         </p>
-                        <div class="bg-white border border-amber-200 rounded-xl p-5">
-                            <p class="text-sm font-bold text-amber-800 mb-2">Lesson Learned</p>
-                            <p class="text-sm text-amber-700 leading-relaxed">Future research should employ a purposive sampling strategy to actively recruit students from diverse socio-economic backgrounds. Engagement with AI training opportunities may already be unequal at the point of access.</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-2xl p-8 border border-amber-100">
-                        <h4 class="font-bold text-gray-700 mb-6 text-sm uppercase tracking-widest">Sample Composition (n=13)</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between text-sm mb-1">
-                                    <span class="text-gray-600">Higher SES</span>
-                                    <span class="font-bold text-gray-800">12 (92.3%)</span>
-                                </div>
-                                <div class="w-full bg-gray-100 rounded-full h-3">
-                                    <div class="bg-gray-700 h-3 rounded-full" style="width:92.3%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm mb-1">
-                                    <span class="text-gray-600">Lower SES</span>
-                                    <span class="font-bold text-uob-red">1 (7.7%)</span>
-                                </div>
-                                <div class="w-full bg-gray-100 rounded-full h-3">
-                                    <div class="bg-uob-red h-3 rounded-full" style="width:7.7%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mt-6 text-xs text-gray-400 italic">Hypothesis testing not possible due to insufficient lower SES representation.</p>
                     </div>
                 </div>
             </div>
@@ -328,7 +330,7 @@
                 <h2 class="text-3xl font-bold tracking-tight">STEM vs. Non-STEM AI Literacy</h2>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-10 mb-10">
+            <div class="space-y-10 mb-10">
                 <div class="finding-card">
                     <div class="figure-box">
                         <img src="quantitative%20results/Figure%204.png" alt="Slope chart by subject area" class="zoomable-img">
@@ -337,39 +339,37 @@
                     <div class="p-10">
                         <h3 class="text-xl font-bold mb-4">The Diverging Trajectories</h3>
                         <p class="text-gray-600 leading-relaxed mb-4">
-                            Prior to training, STEM students exhibited a higher baseline: mean raw score of <strong>56.7%</strong> (θ = 0.251) vs. Non-STEM's <strong>48.6%</strong> (θ = -0.041). Whilst both groups benefitted from the intervention, STEM students experienced substantially higher growth.
+                            Prior to training, STEM students exhibited a higher baseline AI literacy than their Non-STEM peers. The STEM cohort achieved a mean raw score of <strong>56.7%</strong> (mean θ = 0.251), compared to the Non-STEM cohort's mean raw score of <strong>48.6%</strong> (mean θ = -0.041). This confirms that STEM students enter with a slight measurable advantage in AI literacy.
                         </p>
                         <p class="text-gray-500 text-sm leading-relaxed">
-                            The training appears to act as a stronger catalyst for students already embedded in STEM disciplines, effectively <strong>widening the literacy gap</strong> rather than closing it — suggesting AI training may inadvertently reinforce existing inequalities.
+                            Whilst both groups benefitted from the intervention, STEM students experienced substantially higher growth. The training appears to act as a stronger catalyst for students already embedded in STEM disciplines, effectively <strong>widening the literacy gap</strong> rather than closing it — suggesting AI training may inadvertently reinforce existing inequalities.
                         </p>
                     </div>
                 </div>
 
-                <div class="space-y-8">
-                    <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm">
-                        <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 4: Pre- &amp; Post-Training Scores by Subject Area</h4>
-                        <table class="data-table">
-                            <thead>
-                                <tr><th>Group</th><th>n</th><th>Mean Pre</th><th>Mean Post</th><th>Change</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-blue-50/50"><td><strong>STEM</strong></td><td>6</td><td>56.7%</td><td>78.3%</td><td class="font-bold text-green-700">+21.7pp</td></tr>
-                                <tr><td>Non-STEM</td><td>7</td><td>48.6%</td><td>60.0%</td><td class="font-bold text-green-600">+11.4pp</td></tr>
-                                <tr class="font-bold bg-gray-50"><td>All</td><td>13</td><td>52.3%</td><td>68.5%</td><td class="text-green-700">+16.2pp</td></tr>
-                            </tbody>
-                        </table>
-                        <p class="mt-4 text-xs text-gray-400 italic leading-relaxed">Due to small sub-sample sizes, within-group paired t-tests did not reach statistical significance. Descriptive data nonetheless clearly indicates a wider literacy gap post-training.</p>
-                    </div>
+                <div class="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm">
+                    <h4 class="font-black text-uob-red uppercase text-xs mb-8 tracking-widest">Table 4: Pre- &amp; Post-Training Scores by Subject Area</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Group</th><th>n</th><th>Mean Pre</th><th>Mean Post</th><th>Change</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-blue-50/50"><td><strong>STEM</strong></td><td>6</td><td>56.7%</td><td>78.3%</td><td class="font-bold text-green-700">+21.7pp</td></tr>
+                            <tr><td>Non-STEM</td><td>7</td><td>48.6%</td><td>60.0%</td><td class="font-bold text-green-600">+11.4pp</td></tr>
+                            <tr class="font-bold bg-gray-50"><td>All</td><td>13</td><td>52.3%</td><td>68.5%</td><td class="text-green-700">+16.2pp</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-4 text-xs text-gray-400 italic leading-relaxed">Due to small sub-sample sizes, within-group paired t-tests did not reach statistical significance. Descriptive data nonetheless clearly indicates a wider literacy gap post-training.</p>
+                </div>
 
-                    <div class="finding-card">
-                        <div class="figure-box">
-                            <img src="finding/Figure%2016.png" alt="Subject Area comparison" class="zoomable-img">
-                            <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 16: Individual literacy trajectories by academic background.</p>
-                        </div>
-                        <div class="p-8">
-                            <h4 class="font-bold mb-2">Individual Trajectories</h4>
-                            <p class="text-sm text-gray-500 leading-relaxed">Individual trajectories confirm that the STEM cohort's scores surged by +21.7pp to 78.3% (θ increase of +0.816), whilst Non-STEM saw a more modest +11.4pp, finishing at 60.0% (θ increase of +0.215).</p>
-                        </div>
+                <div class="finding-card">
+                    <div class="figure-box">
+                        <img src="quantitative%20results/Figure%205.png" alt="Motivating factors for studying AI" class="zoomable-img">
+                        <p class="mt-4 text-xs text-gray-400 italic text-center">Figure 11: Motivating factors for studying AI, comparing pre- and post-survey responses.</p>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold mb-2">Individual Trajectories</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Individual trajectories confirm that the STEM cohort's scores surged by +21.7pp to 78.3% (θ increase of +0.816), whilst Non-STEM saw a more modest +11.4pp, finishing at 60.0% (θ increase of +0.215). The descriptive data clearly indicates that whilst training benefited all students, the gap between STEM and Non-STEM widened following the intervention.</p>
                     </div>
                 </div>
             </div>
