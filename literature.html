@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behaviour: smooth; }
 
-        /* Bristol Red Variables */
         :root {
             --uob-red: #B01C2E;
             --uob-dark: #8a1624;
@@ -81,6 +80,9 @@
         .policy-table th { text-align: left; padding: 1rem; background: #F3F4F6; border-bottom: 2px solid #D1D5DB; font-size: 0.75rem; text-transform: uppercase; color: #4B5563; font-weight: 700; }
         .policy-table td { padding: 1rem; border-bottom: 1px solid #E5E7EB; font-size: 0.875rem; vertical-align: top; }
         .policy-table tr:last-child td { border-bottom: none; }
+
+        .bristol-policy-table th { background: #111827; color: white; border-bottom: none; }
+        .bristol-policy-table tr:nth-child(even) { background-color: #F9FAFB; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed font-sans">
@@ -102,7 +104,6 @@
                 <a href="resources.html" class="hover:text-uob-red transition">Resources Hub</a>
                 <a href="team.html" class="hover:text-uob-red transition">Team</a>
             </div>
-            <!-- 修改点：将 mailto 改为跳转到 team.html 的 contact 锚点 -->
             <a href="team.html#contact" class="text-xs font-bold uppercase tracking-wider bg-uob-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition shadow-md">
                 Contact Us
             </a>
@@ -119,8 +120,8 @@
             <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 Literature Review & <br><span class="text-uob-red">Theoretical Framework</span>
             </h1>
-            <p class="text-lg text-gray-600 leading-relaxed max-w-3xl border-l-4 border-uob-red pl-6">
-                Exploring Barriers to AI Doctoral Studies: An interdisciplinary review identifying how socio-economic status, psychological gatekeepers, and institutional policy fragmentation create compounded exclusion.
+            <p class="text-lg text-gray-600 leading-relaxed max-w-4xl border-l-4 border-uob-red pl-6">
+                An interdisciplinary review identifying how socio-economic status, psychological gatekeepers, and institutional policy fragmentation create compounded exclusion.
             </p>
         </div>
     </header>
@@ -147,7 +148,7 @@
                     <i data-lucide="building" class="w-5 h-5"></i>
                 </div>
                 <h3 class="text-lg font-bold mb-2 text-gray-900">3. Structural</h3>
-                <p class="text-gray-500 text-sm">Analysis of 2,643 live PhD listings revealing institutional policy and market mechanisms.</p>
+                <p class="text-gray-500 text-sm">Analysis of institutional policy, financial stratification, and market mechanisms.</p>
             </div>
         </div>
     </section>
@@ -368,7 +369,7 @@
 
                 <div id="s1-4" class="prose prose-gray max-w-none text-gray-600 mt-12">
                     <h3>1.4 Conclusion and Recommendations</h3>
-                    <p>There is an urgent need to expand EDI-focused research in AI doctoral education. Educators must active challenge exclusionary academic cultures. Future research should examine the psychological and behavioural dimensions of AI adoption, including its impact on academic identity.</p>
+                    <p>There is an urgent need to expand EDI-focused research in AI doctoral education. Educators must actively challenge exclusionary academic cultures. Future research should examine the psychological and behavioural dimensions of AI adoption, including its impact on academic identity.</p>
                 </div>
             </section>
 
@@ -386,7 +387,6 @@
                     <p>AI literacy is defined by Long and Magerko (2020) as: “a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI; and use AI as a tool online, at home, and in the workplace”.</p>
                 </div>
 
-                <!-- 2.1 AI Literacy Development (Format Reference) -->
                 <div id="s2-1" class="prose prose-gray max-w-none text-gray-600 mt-12">
                     <h3>2.1 AI Literacy Development</h3>
                     <p>AI literacy does not develop automatically. Institutional and psychological filters govern its trajectory.</p>
@@ -402,12 +402,11 @@
                         </li>
                         <li class="border-l-4 border-uob-red pl-6 py-1 bg-white/50 rounded-r-xl">
                             <strong class="block text-gray-900 mb-1">2.1.3 AI Self-Efficacy as a Psychological Boundary</strong>
-                            Stereotypes of the "tech geek" act as psychological boundaries. Low confidence is linked to early disengagement, particularly among URGs and women.
+                            Stereotypes of the "tech geek" act as psychological boundaries. Low confidence is linked to early disengagement, particularly among underrepresented groups and women.
                         </li>
                     </ul>
                 </div>
 
-                <!-- 2.2 Intervention Design (NEW: Format reference 2.1) -->
                 <div id="s2-2" class="prose prose-gray max-w-none text-gray-600 mt-12">
                     <h3>2.2 Intervention Design</h3>
                     <p>AI literacy has a proven positive effect on career intention and interest. Evaluative literature in HE or pre-HE contexts tends to focus either on improving career interest, or on improving participants' AI literacy itself.</p>
@@ -415,20 +414,18 @@
                     <ul class="space-y-4 text-sm list-none pl-0 mt-6">
                         <li class="border-l-4 border-uob-red pl-6 py-1 bg-white/50 rounded-r-xl">
                             <strong class="block text-gray-900 mb-1">2.2.1 Enhancing AI Career Interest</strong>
-                            Interventions often implicitly target AI literacy competencies. Mapping programme features to associated competencies (e.g., machine learning steps, ethics, programmability) suggests that participants are afforded opportunities to develop these skills.
+                            Interventions often implicitly target AI literacy competencies. Mapping programme features to associated competencies suggests that participants are afforded opportunities to develop these skills.
                         </li>
                         <li class="border-l-4 border-uob-red pl-6 py-1 bg-white/50 rounded-r-xl">
                             <strong class="block text-gray-900 mb-1">2.2.2 Barriers to Attendance</strong>
-                            The digital divide remains the most significant barrier to AI literacy development. variability of internet access among university students necessitates hybrid engagement modes as a precaution, facilitating attendance for disabled students or those with caring responsibilities.
+                            The digital divide remains the most significant barrier to AI literacy development. Variability of internet access necessitates hybrid engagement modes, facilitating attendance for disabled students or those with caring responsibilities.
                         </li>
                     </ul>
                 </div>
 
-                <!-- 2.3 Conclusion and Recommendations (NEW: Format reference 1.4) -->
                 <div id="s2-3" class="prose prose-gray max-w-none text-gray-600 mt-12">
                     <h3>2.3 Conclusion and Recommendations</h3>
                     <p>Given that participants' engagement with AI learning is cyclically enabled by their AI literacy and self-efficacy, and that AI literacy increases career interest, this concept is a useful focus for the design of training.</p>
-                    <p>Evaluative research in prior research is largely inconsistent with prevailing definitions. Using a comprehensive framework (Long and Magerko, 2020) for both designing the programme and evaluating its efficacy is essential for robust and transferable research results.</p>
                 </div>
             </section>
 
@@ -486,7 +483,58 @@
                     </div>
                 </div>
 
-                <div id="s3-3" class="mt-12">
+                <!-- 3.2 BEYOND POLICY -->
+                <div id="s3-2" class="prose prose-gray max-w-none text-gray-600 mt-16">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">3.2 Conditions Beyond AI Policies</h3>
+                    <p>While AI use policies in HE shape academic practices, they do not operate in isolation. Wider structural barriers stemming from the broader STEM disciplines and socio-economic conditions often outweigh institutional guidance.</p>
+
+                    <div class="grid md:grid-cols-2 gap-8 my-10">
+                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                            <h4 class="text-uob-red font-bold text-sm mb-3 uppercase tracking-tighter">Finance & Accessibility</h4>
+                            <p class="text-sm leading-relaxed">
+                                Financial costs remain a primary barrier. For a four-year PhD at Bristol, fees for home students exceed <strong>£20,000</strong>. A study found that <strong>79% of PGRs</strong> require supplementary income to cover essential living costs.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                            <h4 class="text-uob-red font-bold text-sm mb-3 uppercase tracking-tighter">Migration & Hidden Costs</h4>
+                            <p class="text-sm leading-relaxed">
+                                Approximately <strong>86.5%</strong> of international PGRs experience hidden costs including visa fees, National Health Service (NHS) surcharges, and educational resources, creating a "False Hope" for global applicants.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 rounded-3xl p-8 border border-red-100">
+                        <h4 class="text-gray-900 font-extrabold mb-4">Spotlight: University of Bristol AI Position</h4>
+                        <p class="text-sm mb-6">Named the <strong>UK’s AI University of the Year in 2024</strong>, Bristol's strategy necessitates an encompassing approach to inclusion. Below is a summary of the framework for student AI engagement:</p>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-xs bristol-policy-table rounded-xl overflow-hidden">
+                                <thead>
+                                    <tr>
+                                        <th class="p-3 text-left">Area</th>
+                                        <th class="p-3 text-left">Key Focus</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="p-3 font-bold">Pedagogical</td>
+                                        <td class="p-3">Integrating AI for learning support (revision, planning) while maintaining academic thinking and fact-checking.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-bold">Governance</td>
+                                        <td class="p-3">Consistent yet flexible policies where module leaders define specific guidance. Mandatory disclosure of AI use.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-bold">Operational</td>
+                                        <td class="p-3">Provision of training resources and citation support. Framing AI as an "assistive companion" rather than a substitute.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="s3-3" class="mt-16">
                     <h3 class="text-xl font-bold text-gray-900 mb-6">3.3 The UK PhD Landscape: Primary Analysis of Barriers to Entry</h3>
                     <p class="text-sm text-gray-600 mb-8">
                         Analysis of 2,643 live listings from FindAPhD.com (Dec 2025) using NLP.
@@ -501,130 +549,42 @@
                         <div class="border-t-4 border-t-gray-800 p-6 bg-white shadow-sm rounded-2xl">
                             <h4 class="font-bold text-gray-900 text-sm mb-2">3.3.2 Global Ambition</h4>
                             <div class="text-4xl font-black text-gray-800 mb-2">79.2%</div>
-                            <p class="text-xs text-gray-500 leading-relaxed">Listings available worldwide. Contrasts with strict visa costs and funding caps ("False Hope").</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">Listings available worldwide. Contrasts with strict visa costs and funding caps.</p>
                         </div>
                     </div>
 
-                    <!-- Table 3 Visual -->
                     <div class="bg-white p-8 border border-gray-100 rounded-3xl shadow-sm">
                         <h4 class="text-lg font-bold text-gray-900 mb-6 uppercase tracking-tight">3.3.3 Estimating Types of AI Projects</h4>
                         <div class="space-y-6">
                             <div>
-                                <div class="flex justify-between text-xs font-bold mb-1">
-                                    <span>Applied AI (Healthcare, Engineering, etc.)</span>
-                                    <span class="text-gray-900">53%</span>
-                                </div>
-                                <div class="w-full bg-gray-100 rounded-full h-2.5 shadow-inner">
-                                    <div class="bg-gray-800 h-2.5 rounded-full" style="width: 53%"></div>
-                                </div>
+                                <div class="flex justify-between text-xs font-bold mb-1"><span>Applied AI</span><span class="text-gray-900">53%</span></div>
+                                <div class="w-full bg-gray-100 rounded-full h-2.5"><div class="bg-gray-800 h-2.5 rounded-full" style="width: 53%"></div></div>
                             </div>
                             <div>
-                                <div class="flex justify-between text-xs font-bold mb-1">
-                                    <span>Tangential / Non-Core</span>
-                                    <span class="text-gray-900">23%</span>
-                                </div>
-                                <div class="w-full bg-gray-100 rounded-full h-2.5 shadow-inner">
-                                    <div class="bg-gray-400 h-2.5 rounded-full" style="width: 23%"></div>
-                                </div>
+                                <div class="flex justify-between text-xs font-bold mb-1"><span>Tangential / Non-Core</span><span class="text-gray-900">23%</span></div>
+                                <div class="w-full bg-gray-100 rounded-full h-2.5"><div class="bg-gray-400 h-2.5 rounded-full" style="width: 23%"></div></div>
                             </div>
                             <div>
-                                <div class="flex justify-between text-xs font-bold mb-1">
-                                    <span>Core AI (Fundamental Research)</span>
-                                    <span class="text-gray-900">16%</span>
-                                </div>
-                                <div class="w-full bg-gray-100 rounded-full h-2.5 shadow-inner">
-                                    <div class="bg-gray-600 h-2.5 rounded-full" style="width: 16%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-xs font-bold mb-1 text-uob-red">
-                                    <span>Policy & Ethics</span>
-                                    <span class="text-uob-red">8%</span>
-                                </div>
-                                <div class="w-full bg-red-100 rounded-full h-2.5 shadow-inner">
-                                    <div class="bg-uob-red h-2.5 rounded-full" style="width: 8%"></div>
-                                </div>
-                                <p class="text-[10px] text-uob-red mt-2 italic font-medium">Societal, legal, and governance studies remain a niche area.</p>
+                                <div class="flex justify-between text-xs font-bold mb-1 text-uob-red"><span>Policy & Ethics</span><span class="text-uob-red">8%</span></div>
+                                <div class="w-full bg-red-100 rounded-full h-2.5"><div class="bg-uob-red h-2.5 rounded-full" style="width: 8%"></div></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- References Section -->
+            <!-- 参考文献下载区 -->
             <section id="references" class="scroll-mt-32 pt-16 border-t border-gray-100">
-                <h2 class="text-2xl font-black text-gray-900 mb-10 uppercase tracking-tight">References</h2>
-                <div class="text-[10px] text-gray-600 leading-relaxed font-mono space-y-4 break-words">
-                    <p>Aiken, C., Dunham, J. and Zwetsloot, R. (2020) Career Preferences of AI Talent. Center for Security and Emerging Technology. Available at: https://cset.georgetown.edu/wp-content/uploads/Career-Preferences-of-AI-Talent.pdf (Accessed: 12 January 2026).</p>
-                    <p>Anonymous (2025a) AI in schools and colleges: what you need to know. The Education Hub. Available at: https://educationhub.blog.gov.uk/2025/06/artificial-intelligence-in-schools-everything-you-need-to-know/ (Accessed: 17 December 2025).</p>
-                    <p>Anonymous (2025b) AI-REAL Toolkit ai Adoption Playbook. Digital Cooperation organisation. Available at: https://dco.org/dco-ai-adoption-playbook/ (Accessed: 12 January 2026).</p>
-                    <p>Anonymous (2025c) Prep-AI: Preparing policy-makers and educators for AI and inclusive digital transformation. UNESCO. Available at: https://www.unesco.org/en/digital-education/artificial-intelligence/prep-ai (Accessed: 8 December 2025).</p>
-                    <p>Anonymous (no date) Information literacy. UNESCO. Available at: https://www.unesco.org/en/query-list/i/422373 (Accessed: 7 January 2026).</p>
-                    <p>Atkinson-Toal, A. and Guo, C. (2024) 'Generative artificial intelligence (AI) education policies of UK universities', Enhancing Teaching and Learning in Higher Education, 2, pp. 70–94. https://doi.org/10.62512/etlhe.20</p>
-                    <p>Banh, L. and Strobel, G. (2023) 'Generative artificial intelligence', Electronic Markets, 33(1), p. 63.</p>
-                    <p>Barretto, D., LaChance, J., Burton, E. and Liao, S.N. (2021) 'Exploring why underrepresented students are less likely to study machine learning and artificial intelligence', Proceedings of the 26th ACM Conference on Innovation and Technology in Computer Science Education (ITiCSE '21), Virtual Event, Germany, 26 June–1 July 2021. New York: ACM, pp. 457–463. https://doi.org/10.1145/3430665.3456332</p>
-                    <p>Barus, O.P. et al. (2025) 'Shaping generative AI governance in higher education: Insights from student perception', International Journal of Educational Research Open, 8, 100452. https://doi.org/10.1016/j.ijedro.2025.100452</p>
-                    <p>Beyer, S. (2014) 'Why are women underrepresented in computer science? Gender differences in stereotypes, self-efficacy, values, and interests and predictors of future CS course-taking and grades', Computer Science Education, 24(2–3), pp. 153–192. https://doi.org/10.1080/08993408.2014.963363</p>
-                    <p>Chen, S.-Y. et al. (2024) 'Exploring the factors of students' intention to participate in AI software development', Library Hi Tech, 42, pp. 392–408. https://doi.org/10.1108/LHT-12-2021-0480</p>
-                    <p>Cheryan, S., Plaut, V.C., Handron, C. and Hudson, L. (2013) 'The stereotypical computer scientist: Gendered media representations as a barrier to inclusion for women', Sex Roles, 69(1–2), pp. 58–71. https://doi.org/10.1007/s11199-013-0296-x</p>
-                    <p>Chun, J. and Elkins, K. (2023) 'The crisis of artificial intelligence: A new digital humanities curriculum for human-centred AI', International Journal of Humanities and Arts Computing, 17(2), pp. 147–167. https://doi.org/10.3366/ijhac.2023.0310</p>
-                    <p>Cowit, N.Q. and Fiesler, C. (2024) 'Student preconceptions of artificial intelligence: Results from a single institution survey', Proceedings of the 55th ACM Technical Symposium on Computer Science Education (SIGCSE 2024), Portland, OR, USA, 20–23 March. New York: ACM, pp. 1610–1611. https://doi.org/10.1145/3626253.3635484</p>
-                    <p>Ding, Y., Liu, J., Lyu, Z., Zhang, K., Schölkopf, B., Jin, Z. and Mihalcea, R. (2025) 'Voices of her: analysing gender differences in the AI publication world', Proceedings of NLP for Positive Impact. https://doi.org/10.18653/v1/2025.nlp4pi-1.17</p>
-                    <p>Drydakis, N. (2024) 'Artificial intelligence capital and employment prospects', Oxford Economic Papers, 76(4), pp. 901–919. https://doi.org/10.1093/oep/gpae005</p>
-                    <p>Drydakis, N. (2025) 'The formation of AI Capital in higher education: Enhancing students' academic performance and employment rates', Computers and Education: Artificial Intelligence, 9, 100476. https://doi.org/10.1016/j.caeai.2025.100476</p>
-                    <p>Duong, C.D. (2025) 'AI literacy and higher education students' digital entrepreneurial intention: A moderated mediation model of AI self-efficacy and digital entrepreneurial self-efficacy', Industry and Higher Education. https://doi.org/10.1177/09504222251370089</p>
-                    <p>Elhussein, G. et al. (2024) Shaping the Future of Learning: The Role of AI in Education 4.0 (Insight Report). World Economic Forum, Switzerland. Available at: https://www.weforum.org/publications/shaping-the-future-of-learning-the-role-of-ai-in-education-4-0/ (Accessed: 12 January 2026).</p>
-                    <p>Fakoor Harehdasht, Z. and Saki, R. (2025) 'Decoding the gender gap: Addressing gender stereotypes and psychological barriers to empower women in technology', arXiv e-prints, arXiv:2509.26332.</p>
-                    <p>Ferguson, S., Mao, K., Magarian, J. and Olechowski, A. (2023) 'Advancing a model of students' intentional persistence in machine learning and artificial intelligence', arXiv preprint, arXiv:2311.10744.</p>
-                    <p>FindAPhD.com (2025) Small language models at University of Aberdeen. Available at: https://www.findaphd.com/phds/project/small-language-models/?p190697 (Accessed: 20 December 2025).</p>
-                    <p>Frachtenberg, E. and Kaner, R.D. (2022) 'Underrepresentation of women in computer systems research', PLoS ONE, 17(4). https://doi.org/10.1371/journal.pone.0266439</p>
-                    <p>Hornberger, M., Bewersdorff, A. and Nerdel, C. (2023) 'What do university students know about Artificial Intelligence? Development and validation of an AI literacy test', Computers and Education: Artificial Intelligence, 5, 100165. https://doi.org/10.1016/j.caeai.2023.100165</p>
-                    <p>Jiang, Y., Xie, L. and Cao, X. (2025) 'Exploring the effectiveness of institutional policies and regulations for generative AI usage in higher education', Higher Education Quarterly, 79(4), e70054. https://doi.org/10.1111/hequ.70054</p>
-                    <p>Kalim, U., Kanwar, A., Sha, J. and Huang, R. (2025) 'Barriers to AI adoption for women in higher education: a systematic review of the Asian context', Smart Learning Environments, 12(1).</p>
-                    <p>Kelly, S., Kaye, S.A. and Oviedo-Trespalacios, O. (2023) 'What factors contribute to the acceptance of artificial intelligence? A systematic review', Telematics and Informatics, 77, 101943.</p>
-                    <p>Kuhlman, C., Jackson, L. and Chunara, R. (2020) No computation without representation: Avoiding data and algorithm biases through diversity. arXiv preprint arXiv:2002.11836.</p>
-                    <p>Kyle, P. (2025) AI Opportunities Action Plan. Department for Science, Innovation & Technology, London. Available at: https://www.gov.uk/government/publications/ai-opportunities-action-plan/ai-opportunities-action-plan (Accessed: 12 January 2026).</p>
-                    <p>Lewis, C.M., Anderson, R.E. and Yasuhara, K. (2016) '"I don't code all day": Fitting in computer science when the stereotypes don't fit', Proceedings of the 2016 ACM Conference on International Computing Education Research (ICER '16), Melbourne, Australia: ACM, pp. 23–32. https://doi.org/10.1145/2960310.2960332</p>
-                    <p>Long, D. and Magerko, B. (2020) 'What is AI Literacy? Competencies and Design Considerations', Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems, Honolulu USA: ACM, pp. 1–16. https://doi.org/10.1145/3313831.3376727</p>
-                    <p>Low, A.M. and Kalender, Z.Y. (2024) Predictors and Socio-Demographic Disparities in STEM Degree Outcomes: A UK Longitudinal Study Using Hierarchical Logistic Regression. arXiv preprint arXiv:2408.05853.</p>
-                    <p>Lu, W. and Lin, C. (2025) 'How do artificial intelligence literacy constructs work—based on a survey of university non-expert students', Education and Information Technologies, 30, pp. 13779–13805. https://doi.org/10.1007/s10639-025-13323-z</p>
-                    <p>Mendigutxia, A. (2024) The role of higher education in national artificial intelligence strategies: a comparative policy review. UNESCOIESALC, HE Policy Brief Series. Available at: https://dl.acm.org/doi/10.1145/3313831.3376727 (Accessed: 12 January 2026).</p>
-                    <p>MIOIR (2025) The AI thesis network: A glimpse into gender dynamics of UK STEMM PhD theses. Manchester: Manchester Institute of Innovation Research. Available at: https://www.mioir.manchester.ac.uk/blog/the-ai-thesis-network-a-glimpse-into-gender-dynamics-of-uk-stemm-phd-theses/ (Accessed: 17 December 2025).</p>
-                    <p>Murphy, P., Dehmer, K. and Noveck, B.S. (2025) New Jersey Department of Education Announces Grant Awards to Support Artificial Intelligence in Education. United States of America: State of New Jersey Department of Education. Available at: https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf (Accessed: 12 January 2026).</p>
-                    <p>Niousha, R., Ahluwalia, D., Wu, M., Zhang, L. and Norouzi, N. (2024) 'Mapping the pathways: A comparative analysis of AI/ML/DS prerequisite structures in R1 institutions in the United States', Proceedings of the 2024 IEEE Frontiers in Education Conference (FIE), Washington, DC, USA, 13–16 October 2024. IEEE. https://doi.org/10.1109/FIE61694.2024.10893290</p>
-                    <p>Oliveira, J., Murphy, T., Vaughn, G., Elfahim, S. and Carpenter, R.E. (2024) 'Exploring the adoption phenomenon of artificial intelligence by doctoral students within doctoral education', New Horizons in Adult Education and Human Resource Development, 36(4), pp. 248–262.</p>
-                    <p>Oxford Context (2024) Viva voce and AI plagiarism defence: Deakin University–University of Oxford collaboration. Available at: [source as published] (Accessed: 20 December 2025).</p>
-                    <p>Oxford University (2025) Guidance on the safe and responsible use of generative AI tools. Available at: [official Oxford guidance URL] (Accessed: 20 December 2025).</p>
-                    <p>Oxford University Communications (2024) Guidelines on the use of generative artificial intelligence. Available at: [official Oxford communications URL] (Accessed: 20 December 2025).</p>
-                    <p>Parker, L. et al. (2025) 'Comparative analysis of artificial intelligence policies in universities across five countries', Discover Computing, 28(1), 267. https://doi.org/10.1007/s10791-025-09745-5</p>
-                    <p>Patole, S., Carpenter, R.E. and McWhorter, R. (2024) Exploring artificial intelligence and ethical use of data in HRD [Paper presentation]. Academy of Human Resource Development 2024 International Research Conference in the Americas, Arlington, VA, United States.</p>
-                    <p>Roberts, S.F., Pyfrom, E., Hoffman, J.A., Pai, C., Reagan, E.K. and Light, A.E. (2021) 'Review of racially equitable admissions practices in STEM doctoral programmes', Education Sciences, 11, 270.</p>
-                    <p>Russell Group (2023) Principles on the use of generative AI tools in education. Available at: https://www.russellgroup.ac.uk/sites/default/files/2025-01/Russell%20Group%20principles%20on%20generative%20AI%20in%20education.pdf (Accessed: 20 December 2025).</p>
-                    <p>Sarraju, A., Ngo, S. and Rodriguez, F. (2023) 'The leaky pipeline of diverse race and ethnicity representation in academic science and technology training in the United States, 2003–2019', PLoS ONE, 18(4), e0284945. https://doi.org/10.1371/journal.pone.0284945</p>
-                    <p>Shams, R.A., Zowghi, D. and Bano, M. (2025) 'AI and the quest for diversity and inclusion: A systematic literature review', AI and Ethics, 5, pp. 411–438.</p>
-                    <p>Smith, P. et al. (2023) PGR Finance. University of Bristol. Available at: https://drive.google.com/drive/u/0/home (Accessed: 6 January 2026).</p>
-                    <p>Stanford University (2023) Artificial Intelligence Index Report: Introduction to the AI Index Report 2023 GP-003. Available at: https://hai.stanford.edu/ai-index/2023-ai-index-report (Accessed: 17 December 2025).</p>
-                    <p>Stathoulopoulos, K., Mateos-Garcia, J. and Nesta, A. (2019) Gender diversity in AI research. London: Nesta. Available at: https://media.nesta.org.uk/documents/Gender_Diversity_in_AI_Research.pdf (Accessed: 17 December 2025).</p>
-                    <p>Stephenson, C., Miller, A.D., Alvarado, C., Barker, L., Barr, V., Camp, T., Frieze, C., Lewis, C., Mindell, E.C., Limbird, L., Richardson, D., Sahami, M., Villa, E., Walker, H. and Zweben, S. (2020) Retention in computer science undergraduate programmes in the U.S.: Data challenges and promising interventions. New York: Association for Computing Machinery. Available at: https://doi.org/10.1145/3406772 (Accessed: 9 January 2026).</p>
-                    <p>UCL Doctoral School (2020) Barriers to doctoral education: Equality, Diversity and Inclusion for Postgraduate Research Students at UCL. University College London Doctoral School. Available at: https://www.ucl.ac.uk/doctoral-school/sites/doctoral_school/files/barriers-to-doctoral-education_0.pdf (Accessed: 6 January 2026).</p>
-                    <p>Ulnicane, I. (2024) 'Governance fix? Power and politics in controversies about governing generative AI', Policy and Society, 44, pp. 70–84.</p>
-                    <p>Universities UK International (2024) Annual report 2023–24. London: Universities UK International. Available at: https://www.universitiesuk.ac.uk/sites/default/files/field/downloads/2024-10/Universities%20UK%20International%20Annual%20Report%2023-24.pdf (Accessed: 17 December 2025).</p>
-                    <p>University College London (UCL) (2024) Three categories of GenAI use in assessment. Available at: Three categories of GenAI use in assessment | Teaching & Learning - UCL – University College London (Accessed: 20 December 2025).</p>
-                    <p>University College London (UCL) and University of Leeds (2024) Using RAG Assessment Categories (Red–Amber–Green) categories. Available at: Using RAG assessment categories | Generative AI (Accessed: 20 December 2025).</p>
-                    <p>University of Bristol (2024) Guidance on AI: Our commitment to the Russell Group principles and BILT guidance. Available at: https://www.bristol.ac.uk/bilt/sharing-practice/guides/guidance-on-ai/our-commitment-to-the-russell-group-principles/ (Accessed: 20 December 2025).</p>
-                    <p>University of Bristol CDT Interactive AI (no date) Equality, Diversity and Inclusion. University of Bristol. Available at: https://www.bristol.ac.uk/cdt/interactive-ai/about-the-centre/equality-diversity-and-inclusion/ (Accessed: 6 January 2026).</p>
-                    <p>University of Bristol News (2024) 'University of Bristol celebrates double win at inaugural AI Award Ceremony'. Available at: https://www.bristol.ac.uk/news/2024/september/ai-awards-2024.html (Accessed: 20 December 2025).</p>
-                    <p>Van De Werfhorst, H.G. (2017) 'Gender segregation across fields of study in post-secondary education: Trends and social differentials', European Sociological Review, 33(3), pp. 449–464.</p>
-                    <p>Vargas-Solar, G. (2025) 'Bridging the divide: Gender, diversity, and inclusion gaps in data science and artificial intelligence across academia and industry in the majority and minority worlds', arXiv preprint, arXiv:2511.18558.</p>
-                    <p>Vettori, O. and Warm, J. (2025) 'The race for AI skills as an obstacle course: Institutional challenges and low-threshold suggestions', Project Leadership and Society, 6, 100183.</p>
-                    <p>Williams, S., Blackmore, K., Berretta, R. and Mansfield, M. (2025) 'Women upskilling or reskilling to an ICT career: A systematic review of drivers and barriers', arXiv preprint, arXiv:2510.22508.</p>
-                    <p>Wu, C., Zhang, H. and Carroll, J.M. (2024) 'AI governance in higher education: Case studies of guidance at Big Ten universities', Future Internet, 16(10), 354. https://doi.org/10.3390/fi16100354</p>
-                    <p>Xia, J., Li, M. and Li, J. (2024) 'Comparative analysis vision of worldwide AI courses', arXiv preprint arXiv:2407.16881. https://doi.org/10.48550/arXiv.2407.16881</p>
-                    <p>Yin, S.X. and Goh, D.H.-L. (2024) 'Factors influencing university students' AI use and knowledge acquisition', Proceedings of the Association for Information Science and Technology, 61(1), pp. 1162–1164. https://doi.org/10.1002/pra2.1218</p>
-                    <p>Young, E., Wajcman, J. and Sprejer, L. (2023) 'Mind the gender gap: Inequalities in the emergent professions of artificial intelligence (AI) and data science', New Technology, Work and Employment, 38, pp. 391–414.</p>
-                    <p>Zhang, D. et al. (2025a) 'Modeling the relationships between secondary school students' AI learning attitude, AI literacy and AI career interest', Education and Information Technologies, 30, pp. 25223–25250. https://doi.org/10.1007/s10639-025-13715-1</p>
-                    <p>Zhang, S., Prasad, P.G. and Schroeder, N.L. (2024) 'Learning about AI: A Systematic Review of Reviews on AI Literacy', Journal of Educational Computing Research, 63(5), pp. 1292–1322. https://doi.org/10.1177/07356331251342</p>
-                    <p>Zhang, Y. et al. (2025b) 'Student Experiences of Hybrid and Online Engineering Labs in a Logic Control Course', Computer Applications in Engineering Education, 33, e70032. https://doi.org/10.1002/cae.70032</p>
+                <h2 class="text-2xl font-black text-gray-900 mb-6 uppercase tracking-tight">References</h2>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-700 font-bold mb-1">Looking for our full bibliography?</p>
+                        <p class="text-gray-500 text-sm">Download the complete reference list in BibTeX format for use in your research.</p>
+                    </div>
+                    <a href="resources/AI project.bib" download class="inline-flex items-center space-x-2 bg-uob-red text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-sm">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Download .bib File</span>
+                    </a>
                 </div>
             </section>
 
@@ -645,7 +605,6 @@
     <script>
         lucide.createIcons();
 
-        // ScrollSpy logic
         const sections = document.querySelectorAll('section, div[id^="s"]');
         const navLinks = document.querySelectorAll('.sidebar-link');
 
@@ -653,7 +612,7 @@
             let current = "";
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 200) {
+                if (pageYOffset >= sectionTop - 250) {
                     current = section.getAttribute("id");
                 }
             });
