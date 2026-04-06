@@ -408,7 +408,7 @@
                     </div>
                 </div>
 
-                <!-- Figure 14 (in finding/ folder — diversity initiatives) -->
+
                 <div class="finding-card">
                     <div class="figure-box">
                         <img src="finding/Figure%2014.png" alt="Presence and framing of diversity initiatives" class="zoomable-img">
@@ -486,7 +486,7 @@
 
             <div class="space-y-12">
 
-                <!-- Figure 16 (in finding/ folder — tunnel vision in academic degree requirements) -->
+
                 <div class="finding-card">
                     <div class="figure-box">
                         <img src="finding/Figure%2016.png" alt="Tunnel vision in academic degree requirements" class="zoomable-img">
@@ -521,12 +521,6 @@
                     <p class="mt-6 text-xs text-gray-400 italic leading-relaxed">Overall, 22.4% of listings explicitly required a programming language, and 25.3% included at least one hard technical requirement (either programming or a technical degree). A further 22.3% referenced specific computer science skills or frameworks, even where these were not framed as strict eligibility criteria.</p>
                 </div>
 
-                <!-- Figure 13 from the Word doc = Figure 13 in finding/ folder — most frequently required programming languages -->
-                <!-- Per the user's mapping this is Figure 16 in the finding/ folder used for programming languages chart -->
-                <!-- Actually per the user: Table 2 then Figure 13 (programming languages) then Table 3 -->
-                <!-- The programming languages chart is finding/Figure 16.png based on the original HTML -->
-                <!-- But per the corrected mapping from user's message: Discipline section has Figure 15 (table tunnel vision), Table 2, Figure 16 (programming languages), Table 3 -->
-                <!-- The finding/ folder Figure 16 = programming languages bar chart per original HTML line 472 -->
 
                 <div class="finding-card">
                     <div class="figure-box">
@@ -594,7 +588,7 @@
 <script>
     lucide.createIcons();
 
-    // Image Zoom — click to enlarge, click anywhere to close
+
     const overlay = document.getElementById('img-zoom-overlay');
     const zoomImg = document.getElementById('zoom-img');
     function showZoom(src, alt) { zoomImg.src = src; zoomImg.alt = alt || ''; overlay.classList.add('active'); }
@@ -605,7 +599,7 @@
     overlay.addEventListener('click', hideZoom);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideZoom(); });
 
-    // Scrollspy
+
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
     const sections = document.querySelectorAll('section[id]');
     window.addEventListener('scroll', () => {

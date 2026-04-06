@@ -573,7 +573,7 @@
                 </div>
             </section>
 
-            <!-- 参考文献下载区 -->
+
             <section id="references" class="scroll-mt-32 pt-16 border-t border-gray-100">
                 <h2 class="text-2xl font-black text-gray-900 mb-6 uppercase tracking-tight">References</h2>
                 <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col md:flex-row items-center justify-between">
@@ -619,7 +619,6 @@
 
             navLinks.forEach((link) => {
                 link.classList.remove("sidebar-active");
-                // 已修改精确匹配以避免高亮错误
                 if (link.getAttribute("href") === "#" + current && current !== "") {
                     link.classList.add("sidebar-active");
                 }

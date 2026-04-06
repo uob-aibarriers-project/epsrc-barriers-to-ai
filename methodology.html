@@ -694,7 +694,7 @@
     <script>
         lucide.createIcons();
 
-        // Sidebar active link highlight on scroll
+
         const sections = ['phase1','phase2','phase3','phase4','phase5','phase6','ethics'];
         const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
@@ -727,7 +727,7 @@
             if (el) obs.observe(el);
         });
 
-        // Pipeline dot highlight on scroll
+
         const pipelineDots = document.querySelectorAll('.step-dot');
         const phaseObs = new IntersectionObserver((entries) => {
             entries.forEach(e => {
